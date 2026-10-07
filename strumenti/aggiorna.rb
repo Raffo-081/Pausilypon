@@ -147,6 +147,11 @@ File.write(File.join(ROOT, 'dati', 'cartoline.js'),
   "// File scritto da strumenti/aggiorna.rb a partire da cartoline.xlsx: non modificarlo a mano.\n" \
   "window.PAUSILYPON_CARTOLINE = " + JSON.pretty_generate(cartoline) + ";\n")
 
+# cambio il numero di versione dei file in index.html, in modo che i browser non mostrino una copia vecchia
+index = File.join(ROOT, 'index.html')
+versione = Time.now.strftime('%Y%m%d%H%M')
+File.write(index, File.read(index).gsub(/((?:css|js|dati)\/[\w.-]+?\.(?:css|js))\?v=\d+/) { "#{$1}?v=#{versione}" })
+
 puts "Cartoline: #{cartoline.size} (#{cartoline.count { |c| !c['foto'].empty? }} con foto vera, #{nuove} foto convertite adesso)"
 if avvisi.empty?
   puts 'Nessun problema trovato.'
