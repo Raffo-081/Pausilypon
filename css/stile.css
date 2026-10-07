@@ -1,23 +1,20 @@
+/* Il sito ha un solo tema, scuro. */
 :root {
-  --bg: #F1F3F4;
-  --ink: #171A1D;
-  --muted: #6D757C;
-  --line: #C9D0D5;
-  --sea: #E4E9EC;
-  --accent: #2347C5;
-  --paper: #FCFCFB;
+  --bg: #0F1214;
+  --ink: #E8ECEE;
+  --muted: #8B949B;
+  --line: #2A3238;
+  --sea: #14191C;
+  --accent: #8EA8FF;
+  --paper: #1C2226;
   --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   /* come vengono "scolorite" le tessere di OpenStreetMap */
-  --tiles: grayscale(1) contrast(.88) brightness(1.06);
+  --tiles: grayscale(1) invert(1) contrast(.82) brightness(.82);
+  color-scheme: dark;
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-:root[data-theme="dark"] {
-  --bg: #0F1214; --ink: #E8ECEE; --muted: #8B949B; --line: #2A3238;
-  --sea: #14191C; --accent: #8EA8FF; --paper: #1C2226;
-  --tiles: grayscale(1) invert(1) contrast(.82) brightness(.82);
 }
 html { scroll-padding-top: env(safe-area-inset-top, 0px); }
 *, *::before, *::after { box-sizing: border-box; }
@@ -48,12 +45,6 @@ header { display: flex; align-items: flex-start; justify-content: space-between;
 .switch button { background: none; border: 0; padding: 6px 12px; color: var(--muted); }
 .switch button[aria-pressed="true"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--accent); }
 .switch button:hover { color: var(--ink); }
-.theme {
-  width: 34px; height: 34px; padding: 0; display: grid; place-items: center;
-  background: none; border: 1px solid var(--line); border-radius: 50%; color: var(--muted);
-}
-.theme:hover { color: var(--ink); }
-.theme svg { width: 16px; height: 16px; }
 
 /* Mappa */
 .stage { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr); gap: 36px; align-items: start; }
@@ -221,4 +212,66 @@ footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .inner, .thumb img, .mazzetto img, .pin::before, .levels button, .zona-area { transition: none; }
+}
+
+/* Schermata iniziale */
+#intro { position: fixed; inset: 0; z-index: 3000; cursor: pointer; transition: transform 1.7s cubic-bezier(.66, 0, .3, 1); }
+.intro-quadro { position: absolute; inset: 0; overflow: hidden; background: var(--bg); }
+/* sotto il mare, una sfumatura: quando la scena sale, il bordo che lascia scoperto il sito è morbido */
+.intro-coda { position: absolute; left: 0; right: 0; top: calc(100% - 1px); height: 38vh; background: linear-gradient(#2d3d72, rgba(45, 61, 114, .55) 30%, rgba(45, 61, 114, 0)); }
+.intro-scena { position: absolute; inset: 0; width: 100%; height: 100%; display: block; animation: intro-entra 1.2s ease both; }
+.intro-titolo {
+  position: absolute; left: 0; right: 0; top: 6vh; display: flex; flex-direction: column; align-items: center; text-align: center;
+  animation: intro-entra 1s ease both;
+  transition: transform 1.7s cubic-bezier(.66, 0, .3, 1);
+}
+.intro-titolo .logo { width: clamp(60px, 10vh, 100px); height: clamp(60px, 10vh, 100px); }
+.intro-nome { margin: 12px 0 0; font-family: var(--serif); font-weight: 300; font-size: clamp(28px, 5vh, 44px); letter-spacing: .04em; line-height: 1.1; }
+.intro-motto { margin: 6px 0 0; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(15px, 2.2vh, 19px); color: var(--muted); }
+.intro-scena > .strato { transition: transform 1.7s cubic-bezier(.66, 0, .3, 1); }
+@keyframes intro-entra { from { opacity: 0; } }
+.onda { animation: onda 4s linear infinite; }
+.onda.contraria { animation-direction: reverse; }
+@keyframes onda { to { transform: translateX(-48px); } }
+/* la barchetta dei pescatori: avanza piano e dondola */
+.barca-rotta { animation: rotta 10s linear both; }
+.barca-dondola { transform-origin: 0 0; animation: dondola 2.4s ease-in-out infinite alternate; }
+@keyframes rotta { from { transform: translateX(-50px); } to { transform: translateX(50px); } }
+@keyframes dondola { from { transform: translateY(1.5px) rotate(-4deg); } to { transform: translateY(-2.5px) rotate(3deg); } }
+/* le code delle sirene: si muovono un po e poi spariscono sott acqua, ognuna con i suoi tempi (li decide js/intro.js) */
+.coda { transform-origin: 0 10px; animation: coda 2s ease-in-out both; }
+@keyframes coda {
+  0% { transform: rotate(-6deg); }
+  18% { transform: rotate(7deg); }
+  36% { transform: rotate(-7deg); }
+  54% { transform: rotate(6deg); }
+  70% { transform: translateY(0) rotate(-5deg); }
+  100% { transform: translateY(64px) rotate(-14deg); }
+}
+/* Partenope: esce con un tuffo ad arco, si rituffa, e la coda resta fuori per ultima battendo la pinna */
+.sirena { transform-origin: 0 0; animation: tuffo 2.9s both; }
+@keyframes tuffo {
+  0%, 14% { transform: rotate(-140deg); animation-timing-function: cubic-bezier(.3, .6, .4, 1); }
+  50% { transform: rotate(38deg); animation-timing-function: linear; }
+  78% { transform: rotate(60deg); animation-timing-function: ease-in; }
+  100% { transform: rotate(155deg); }
+}
+.pinna { animation: pinna .42s ease-in-out infinite alternate; }
+@keyframes pinna { from { transform: rotate(-13deg); } to { transform: rotate(13deg); } }
+.intro-isola { transform-origin: 564px 432px; }   /* la grandezza la regola js/intro.js in base allo schermo */
+
+/* Passaggio al sito: tutta la scena sale come un sipario e scopre il sito dal basso, che intanto compare in dissolvenza.
+   Cielo e isola salgono un po più in fretta del mare, per dare profondità. */
+body.intro { overflow: hidden; }
+body.intro .wrap { opacity: 0; transform: translateY(48px); }
+body.intro-via .wrap { opacity: 1; transform: none; transition: opacity 1s ease .15s, transform 1.6s cubic-bezier(.2, .7, .2, 1) .1s; }
+body.intro-via #intro { transform: translateY(-140vh); pointer-events: none; }
+body.intro-via .intro-titolo { transform: translateY(-30vh); }
+body.intro-via .intro-scena > .strato { transform: translateY(-140px); }
+@media (prefers-reduced-motion: reduce) {
+  .onda, .coda, .sirena, .pinna, .barca-rotta, .barca-dondola, .intro-titolo, .intro-scena { animation: none; }
+  #intro, .intro-scena > .strato, .intro-titolo { transition: none; }
+  body.intro .wrap { transform: none; }
+  body.intro-via #intro { transform: none; opacity: 0; transition: opacity .6s ease; }
+  body.intro-via .intro-scena > .strato, body.intro-via .intro-titolo { transform: none; }
 }

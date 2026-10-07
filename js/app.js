@@ -21,10 +21,6 @@
     orca:     '<path d="M2 17 Q8 11 15 13 Q20 14.5 22 17"/><path d="M9.5 12.3 Q10.5 5 15 3.5 Q14 9 15.5 13.2"/><path d="M17.5 15 l1.6 .5"/><path d="M2 21 q3 -2.5 6 0 t6 0 t6 0"/>',
     arco:     '<path d="M4 20 V12 a3 3 0 0 1 6 0 V20 M14 20 V12 a3 3 0 0 1 6 0 V20 M2 20 H22"/>'
   };
-  var ICON = {
-    sole: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">' + GLYPH.sole + '</svg>',
-    luna: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5 A8 8 0 1 1 9.5 4 A6.5 6.5 0 0 0 20 14.5 Z"/></svg>'
-  };
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -268,18 +264,6 @@
   }
   function flip() { cardEl.classList.toggle('flipped'); }
 
-  // ---------- Tema chiaro / scuro ----------
-  var themeBtn = document.getElementById('theme');
-  function mostraTema() {
-    themeBtn.innerHTML = document.documentElement.dataset.theme === 'dark' ? ICON.sole : ICON.luna;
-  }
-  themeBtn.addEventListener('click', function () {
-    var t = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    document.documentElement.dataset.theme = t;
-    try { localStorage.setItem('pausilypon-tema', t); } catch (e) {}
-    mostraTema();
-  });
-
   // ---------- Eventi ----------
   document.addEventListener('click', function (e) {
     var t = e.target.closest('[data-view],[data-zona],[data-card]');
@@ -309,5 +293,5 @@
   map.on('zoomend', aggiornaLivelli);
   map.fitBounds(tutto, { padding: [48, 48], animate: false });
   aggiornaLivelli();
-  mostraTema(); renderPanel(); renderGrid(); renderList(); setView('map');
+  renderPanel(); renderGrid(); renderList(); setView('map');
 })();
