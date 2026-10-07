@@ -1,0 +1,9 @@
+# Cose che restano solo sul Mac e non vanno online
+
+# le foto originali, pesanti: online vanno solo le copie in foto-web
+foto/
+
+# file di servizio del Mac, di Excel e degli strumenti di lavoro
+.DS_Store
+~$*
+.claude/

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pausilypon, proposte di logo</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Newsreader:opsz,wght@6..72,300;6..72,400&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; padding: 28px 24px 48px; background: #F1F3F4; color: #171A1D; font-family: "Hanken Grotesk", system-ui, sans-serif; line-height: 1.5; }
+  h1 { font-family: "Newsreader", Georgia, serif; font-weight: 300; font-size: 30px; margin: 0 0 4px; }
+  .intro { color: #6D757C; margin: 0 0 28px; max-width: 60ch; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1180px; }
+  .opt h2 { font-family: "Newsreader", Georgia, serif; font-weight: 400; font-size: 24px; margin: 14px 0 2px; }
+  .opt p { margin: 0; color: #6D757C; font-size: 14px; }
+  .tile { display: grid; grid-template-rows: 1fr auto; gap: 18px; padding: 28px 24px 20px; border-radius: 4px; }
+  .tile.chiaro { background: #FCFCFB; color: #171A1D; --accent: #2347C5; border-radius: 4px 4px 0 0; }
+  .tile.scuro { background: #0F1214; color: #E8ECEE; --accent: #8EA8FF; border-radius: 0 0 4px 4px; }
+  .big { width: 120px; height: 120px; margin: 0 auto; color: var(--accent); }
+  .lockup { display: flex; align-items: center; gap: 10px; font-family: "Newsreader", Georgia, serif; font-weight: 300; font-size: 24px; letter-spacing: .03em; }
+  .lockup svg { width: 30px; height: 30px; color: var(--accent); }
+  .lockup .mini { width: 16px; height: 16px; margin-left: auto; }
+  svg { display: block; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- A: la nave di Ulisse con la poppa che finisce in coda di sirena -->
+  <symbol id="logo-a" viewBox="0 0 64 64">
+    <path d="M54 36 Q49 47 37 47 H26 Q13 47 12 30"/>
+    <path d="M54 36 H17"/>
+    <path d="M12 30 Q5 26 3 17 Q12 20 12 26 Q12 20 21 17 Q19 26 12 30 Z"/>
+    <path d="M34 36 V31 M34 14 V8"/>
+    <path d="M25 14 H43 Q46 22 43 31 H25 Q28 22 25 14 Z"/>
+    <path d="M6 57 q6.5 -5 13 0 t13 0 t13 0 t13 0"/>
+  </symbol>
+  <!-- B: la P di Pausilypon e Partenope, fatta di albero e vela -->
+  <symbol id="logo-b" viewBox="0 0 64 64">
+    <path d="M24 6 V44"/>
+    <path d="M24 9 Q49 10 47 22 Q45 33 24 34"/>
+    <path d="M11 44 H51 Q47 53 38 53 H24 Q14 53 11 44 Z"/>
+    <path d="M8 61 q6 -4 12 0 t12 0 t12 0 t12 0"/>
+  </symbol>
+  <!-- C: timbro postale con la coda di Partenope che esce dal mare -->
+  <symbol id="logo-c" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="29"/>
+    <path d="M27 45 Q26 33 34 26 Q35 36 39 45"/>
+    <path d="M34 26 Q27 22 25 13 Q34 16 34 22 Q34 16 43 13 Q41 22 34 26 Z"/>
+    <path d="M12 46 q5 -4 10 0 t10 0 t10 0 t10 0"/>
+    <path d="M18 53 q4.7 -3.5 9.4 0 t9.4 0 t9.4 0"/>
+    <path d="M17 20 L18.3 24.7 L23 26 L18.3 27.3 L17 32 L15.7 27.3 L11 26 L15.7 24.7 Z" stroke-width="1.5"/>
+  </symbol>
+</svg>
+
+<h1>Proposte di logo</h1>
+<p class="intro">Tre idee sul mito di Ulisse e Partenope. Ognuna è mostrata grande, accanto al nome e piccolissima (come apparirà nella linguetta del browser), su fondo chiaro e scuro.</p>
+
+<div class="grid">
+  <div class="opt">
+    <div class="tile chiaro"><svg class="big"><use href="#logo-a"/></svg>
+      <div class="lockup"><svg><use href="#logo-a"/></svg>Pausilypon<svg class="mini"><use href="#logo-a"/></svg></div></div>
+    <div class="tile scuro"><svg class="big"><use href="#logo-a"/></svg>
+      <div class="lockup"><svg><use href="#logo-a"/></svg>Pausilypon<svg class="mini"><use href="#logo-a"/></svg></div></div>
+    <h2>A. La nave-sirena</h2>
+    <p>La nave di Ulisse, con la poppa che si arriccia e diventa la coda di Partenope. I due personaggi in un solo disegno.</p>
+  </div>
+  <div class="opt">
+    <div class="tile chiaro"><svg class="big"><use href="#logo-b"/></svg>
+      <div class="lockup"><svg><use href="#logo-b"/></svg>Pausilypon<svg class="mini"><use href="#logo-b"/></svg></div></div>
+    <div class="tile scuro"><svg class="big"><use href="#logo-b"/></svg>
+      <div class="lockup"><svg><use href="#logo-b"/></svg>Pausilypon<svg class="mini"><use href="#logo-b"/></svg></div></div>
+    <h2>B. La P a vela</h2>
+    <p>Una P (Pausilypon, Partenope) fatta con l'albero a cui Ulisse si fece legare e una vela gonfia. La più semplice e leggibile da piccola.</p>
+  </div>
+  <div class="opt">
+    <div class="tile chiaro"><svg class="big"><use href="#logo-c"/></svg>
+      <div class="lockup"><svg><use href="#logo-c"/></svg>Pausilypon<svg class="mini"><use href="#logo-c"/></svg></div></div>
+    <div class="tile scuro"><svg class="big"><use href="#logo-c"/></svg>
+      <div class="lockup"><svg><use href="#logo-c"/></svg>Pausilypon<svg class="mini"><use href="#logo-c"/></svg></div></div>
+    <h2>C. Il timbro di Partenope</h2>
+    <p>Un timbro postale tondo: la coda della sirena che si tuffa nel golfo e la stella del navigante. Si lega bene alle cartoline.</p>
+  </div>
+</div>
+</body>
+</html>
