@@ -78,7 +78,11 @@
   }
   function ll(p) { return [p[1], p[0]]; }   // i dati sono [lon, lat], Leaflet vuole [lat, lon]
 
-  var map = L.map('map', { zoomSnap: 0.5, minZoom: 2, worldCopyJump: true });
+  // In orizzontale la mappa si ripete all'infinito, come un globo; in verticale si ferma ai poli.
+  var map = L.map('map', {
+    zoomSnap: 0.5, minZoom: 2, worldCopyJump: true,
+    maxBounds: [[-85, -36000], [85, 36000]], maxBoundsViscosity: 1
+  });
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
