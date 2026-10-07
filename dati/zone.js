@@ -34,6 +34,32 @@ window.PAUSILYPON_ZONE = [
     ]
   },
   {
+    id: 'salerno',
+    nome: 'Salerno e Cilento',
+    dove: 'Da Salerno a Sapri',
+    tipo: 'disegnata',
+    centro: [15.25, 40.35],
+    forma: [
+      [[14.78, 40.72], [14.76, 40.65], [14.88, 40.52], [14.92, 40.38], [14.87, 40.24], [14.98, 40.13],
+       [15.22, 39.97], [15.38, 39.95], [15.62, 40.01], [15.72, 40.08], [15.74, 40.25], [15.76, 40.42],
+       [15.60, 40.58], [15.38, 40.70], [15.12, 40.76], [14.92, 40.77]]
+    ]
+  },
+  {
+    id: 'roma',
+    nome: 'Roma',
+    dove: 'Italia',
+    tipo: 'punto',
+    centro: [12.50, 41.90]
+  },
+  {
+    id: 'dublino',
+    nome: 'Dublino',
+    dove: 'Irlanda',
+    tipo: 'punto',
+    centro: [-6.26, 53.35]
+  },
+  {
     id: 'lofoten',
     nome: 'Lofoten',
     dove: 'Norvegia, oltre il Circolo Polare',
@@ -50,5 +76,35 @@ window.PAUSILYPON_ZONE = [
     dove: 'Norvegia',
     tipo: 'punto',
     centro: [10.75, 59.91]
+  },
+  {
+    id: 'caponord',
+    nome: 'Capo Nord',
+    dove: 'Troms e Finnmark, Norvegia',
+    tipo: 'disegnata',
+    centro: [25.78, 71.0],
+    forma: [
+      [[16.0, 68.7], [16.8, 69.5], [18.5, 70.3], [21.5, 70.6], [23.5, 71.1], [26.0, 71.35], [28.5, 71.2],
+       [31.5, 70.6], [31.2, 69.9], [30.3, 69.3], [28.8, 69.0], [28.5, 69.7], [27.0, 69.9], [25.8, 69.4],
+       [24.5, 68.6], [22.5, 68.6], [21.0, 69.1], [20.0, 68.9], [19.0, 68.3], [17.3, 68.3]]
+    ]
+  },
+  {
+    id: 'svalbard',
+    nome: 'Isole Svalbard',
+    dove: 'Norvegia, Mar Glaciale Artico',
+    tipo: 'disegnata',
+    centro: [16.0, 78.5],
+    forma: [
+      [[10.0, 78.9], [10.5, 79.9], [15.0, 80.4], [22.0, 80.9], [30.0, 80.6], [34.0, 80.2], [33.0, 79.0],
+       [27.0, 78.0], [25.0, 77.0], [18.0, 76.3], [14.5, 76.6], [12.5, 77.8]]
+    ]
+  },
+  {
+    id: 'istanbul',
+    nome: 'Istanbul',
+    dove: 'Turchia',
+    tipo: 'punto',
+    centro: [28.98, 41.01]
   }
 ];

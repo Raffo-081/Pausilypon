@@ -124,7 +124,26 @@
       if (z.area) { if (vicino) z.area.addTo(map); else z.area.remove(); }
       if (vicino) z.marker.remove(); else z.marker.addTo(map);
     });
+    sistemaEtichette();
     segnaScelta();
+  }
+  // Quando due marcatori sono vicini le etichette si coprirebbero: provo a destra, poi a sinistra, altrimenti resta solo il puntino.
+  function sistemaEtichette() {
+    var occupati = [];
+    function libero(r) {
+      return occupati.every(function (o) { return r.x1 < o.x0 || r.x0 > o.x1 || r.y1 < o.y0 || r.y0 > o.y1; });
+    }
+    ZONE.forEach(function (z) {
+      var el = z.marker.getElement();
+      if (!el || !(el = el.querySelector('.pin'))) return;
+      var p = map.latLngToContainerPoint(z.marker.getLatLng()), w = z.nome.length * 7.5 + 26;
+      var destra = { x0: p.x + 10, x1: p.x + 14 + w, y0: p.y - 10, y1: p.y + 10 };
+      var sinistra = { x0: p.x - 14 - w, x1: p.x - 10, y0: p.y - 10, y1: p.y + 10 };
+      var scelta = libero(destra) ? destra : libero(sinistra) ? sinistra : null;
+      el.classList.toggle('sx', scelta === sinistra);
+      el.classList.toggle('muta', !scelta);
+      if (scelta) occupati.push(scelta);
+    });
   }
   function segnaScelta() {
     ZONE.forEach(function (z) {
