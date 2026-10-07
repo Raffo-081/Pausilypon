@@ -248,12 +248,10 @@ footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
   70% { transform: translateY(0) rotate(-5deg); }
   100% { transform: translateY(64px) rotate(-14deg); }
 }
-/* Partenope: esce con un tuffo ad arco, si rituffa, e la coda resta fuori per ultima battendo la pinna */
+/* Partenope: un unico tuffo ad arco, senza fermarsi; la coda è l ultima a sparire, battendo la pinna */
 .sirena { transform-origin: 0 0; animation: tuffo 2.9s both; }
 @keyframes tuffo {
-  0%, 14% { transform: rotate(-140deg); animation-timing-function: cubic-bezier(.3, .6, .4, 1); }
-  50% { transform: rotate(38deg); animation-timing-function: linear; }
-  78% { transform: rotate(60deg); animation-timing-function: ease-in; }
+  0%, 12% { transform: rotate(-140deg); animation-timing-function: cubic-bezier(.4, .25, .6, .75); }
   100% { transform: rotate(155deg); }
 }
 .pinna { animation: pinna .42s ease-in-out infinite alternate; }
