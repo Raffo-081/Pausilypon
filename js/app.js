@@ -90,7 +90,7 @@
     z.marker = L.marker(ll(z.centro), {
       icon: L.divIcon({
         className: '', iconSize: [44, 44], iconAnchor: [22, 22],
-        html: '<div class="pin"><span>' + esc(z.nome) + '<small>' + n + '</small></span></div>'
+        html: '<div class="pin"><span>' + esc(z.nome) + '</span></div>'
       }),
       title: z.nome + ', ' + quante(n), alt: z.nome
     }).on('click', function () { selectZona(z.id); });
