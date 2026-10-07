@@ -84,7 +84,8 @@
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
-  var tutto = L.latLngBounds([]);
+  // La vista di partenza: l Europa, da Dublino a Istanbul e fino a Capo Nord. Le Svalbard restano appena fuori, più su.
+  var VISTA = L.latLngBounds([[36, -11], [72, 33]]);
   ZONE.forEach(function (z) {
     var n = cardsOf(z.id).length;
     z.marker = L.marker(ll(z.centro), {
@@ -103,9 +104,6 @@
         className: 'zona-area' + (z.tipo === 'disegnata' ? ' disegnata' : '')
       }).on('click', function () { selectZona(z.id); });
       z.bounds = z.area.getBounds();
-      tutto.extend(z.bounds);
-    } else {
-      tutto.extend(ll(z.centro));
     }
   });
 
@@ -148,7 +146,7 @@
       if ((el = z.marker.getElement()) && (el = el.querySelector('.pin'))) el.classList.toggle('scelta', scelta);
     });
   }
-  function vistaIntera() { map.fitBounds(tutto, { padding: [48, 48], animate: !fermo }); }
+  function vistaIntera() { map.fitBounds(VISTA, { animate: !fermo }); }
 
   // ---------- Viste ----------
   var state = { view: 'map', zona: null };
@@ -292,7 +290,7 @@
   });
 
   map.on('zoomend', aggiornaLivelli);
-  map.fitBounds(tutto, { padding: [48, 48], animate: false });
+  map.fitBounds(VISTA, { animate: false });
   aggiornaLivelli();
   renderPanel(); renderGrid(); renderList(); setView('map');
 })();

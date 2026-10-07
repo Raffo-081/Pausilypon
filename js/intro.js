@@ -6,6 +6,14 @@
   var intro = document.getElementById('intro'), mare = document.getElementById('intro-mare');
   if (!intro || !mare) return;
 
+  // La schermata compare solo quando si apre il sito: ricaricando la pagina o tornandoci nella stessa visita non si rivede.
+  // (Con #fermo in fondo all indirizzo compare sempre, per provarla.)
+  var prova = location.hash === '#fermo';
+  try {
+    if (sessionStorage.getItem('pausilypon-intro') && !prova) { intro.remove(); return; }
+    sessionStorage.setItem('pausilypon-intro', '1');
+  } catch (e) {}
+
   var DURATA = 3000;                 // quanto resta la schermata, in millisecondi
   var NS = 'http://www.w3.org/2000/svg';
   // le file di onde, dalla più lontana (piccola, sotto l'isola) alla più vicina (grande, in primo piano): altezza, grandezza, colore, nitidezza della cresta, secondi per un giro
@@ -134,7 +142,7 @@
     }, 1900);
   }
   // aggiungendo #fermo in fondo all indirizzo la schermata non si chiude da sola: serve per provarla con calma
-  if (location.hash !== '#fermo') setTimeout(fine, DURATA);
+  if (!prova) setTimeout(fine, DURATA);
   intro.addEventListener('click', fine);
   document.addEventListener('keydown', fine, { once: true });
 })();
