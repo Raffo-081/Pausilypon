@@ -165,8 +165,9 @@
     if (!state.zona) {
       el.innerHTML = '<h2>Scegli una zona</h2><p class="sub">' + ZONE.length + ' zone, ' + quante(CARDS.length) + '</p>' +
         '<ul class="levels">' + ZONE.map(function (z) {
-          return '<li><button type="button" data-zona="' + esc(z.id) + '"><span><span class="n">' + esc(z.nome) + '</span>' +
-            '<span class="d">' + esc(z.dove) + '</span></span><span class="c">' + quante(cardsOf(z.id).length) + '</span></button></li>';
+          var n = cardsOf(z.id).length;
+          return '<li><button type="button"' + (n ? '' : ' class="vuota"') + ' data-zona="' + esc(z.id) + '"><span><span class="n">' + esc(z.nome) + '</span>' +
+            '<span class="d">' + esc(z.dove) + '</span></span><span class="c">' + quante(n) + '</span></button></li>';
         }).join('') + '</ul>';
       return;
     }

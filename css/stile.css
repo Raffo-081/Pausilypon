@@ -26,17 +26,21 @@ button { font: inherit; color: inherit; cursor: pointer; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 24px 48px; }
-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
-.wordmark { font-family: var(--serif); font-weight: 300; font-size: 30px; letter-spacing: .03em; margin: 0; }
+/* intestazione al centro; sotto, una riga di onde greche come quelle della schermata iniziale */
+header {
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;
+  padding-bottom: 34px; margin-bottom: 26px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='26'%3E%3Cpath d='M0 22c10 0 14-18 27-18c9 0 14 7 10 13c-2 3 3 5 11 5' fill='none' stroke='%238EA8FF' stroke-opacity='.55' stroke-width='1.4'/%3E%3Cpath d='M33 10c3 3 0 8-4 5' fill='none' stroke='%238EA8FF' stroke-opacity='.4' stroke-width='1.1'/%3E%3C/svg%3E") repeat-x center bottom;
+}
+.wordmark { font-family: var(--serif); font-weight: 300; font-size: 38px; letter-spacing: .03em; margin: 0; }
 /* logo accanto al nome */
 .logo { display: block; flex: none; color: var(--accent); }
-.wordmark { display: flex; align-items: center; gap: 12px; }
-.wordmark .logo { width: 46px; height: 46px; }
+.wordmark { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.wordmark .logo { width: 62px; height: 62px; }
 .back .mark { display: flex; align-items: center; gap: 1.6cqw; }
 .back .mark .logo { width: clamp(22px, 5.5cqw, 40px); height: clamp(22px, 5.5cqw, 40px); }
 
 /* voce di dizionario sotto il titolo */
-.lemma { margin: 6px 0 0; max-width: 62ch; font-family: var(--serif); font-size: 15px; line-height: 1.45; color: var(--muted); }
+.lemma { margin: 6px auto 0; max-width: 62ch; font-family: var(--serif); font-size: 15px; line-height: 1.45; color: var(--muted); }
 .lemma .sill { color: var(--ink); letter-spacing: .02em; }
 .lemma abbr { font-style: italic; text-decoration: none; margin: 0 4px; }
 .lemma .senso { display: block; color: var(--ink); }
@@ -47,8 +51,8 @@ header { display: flex; align-items: flex-start; justify-content: space-between;
 .switch button:hover { color: var(--ink); }
 
 /* Mappa */
-.stage { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr); gap: 36px; align-items: start; }
-.map { height: min(72vh, 640px); background: var(--sea); border-radius: 4px; overflow: hidden; isolation: isolate; }
+.stage { display: grid; grid-template-columns: 1fr; gap: 26px; }
+.map { height: min(64vh, 620px); background: var(--sea); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; isolation: isolate; }
 .map.leaflet-container { background: var(--sea); font-family: var(--sans); }
 .map .leaflet-tile-pane { filter: var(--tiles); }
 .map .leaflet-control-attribution { background: color-mix(in srgb, var(--bg) 80%, transparent); color: var(--muted); font-size: 11px; }
@@ -68,23 +72,24 @@ header { display: flex; align-items: flex-start; justify-content: space-between;
 
 /* marcatore di una zona vista da lontano (o senza area) */
 .pin { position: relative; width: 44px; height: 44px; cursor: pointer; }
+/* il marcatore è un piccolo timbro: un punto con il bordo a perline del logo */
 .pin::before {
-  content: ""; position: absolute; left: 50%; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px;
-  border-radius: 50%; background: var(--accent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
-  transition: box-shadow .2s ease;
+  content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px;
+  border-radius: 50%; background: var(--accent); outline: 2px dotted var(--accent); outline-offset: 5px;
+  transition: outline-offset .2s ease;
 }
-.pin:hover::before, .pin.scelta::before { box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 24%, transparent); }
+.pin:hover::before, .pin.scelta::before { outline-offset: 8px; }
 .pin span {
   position: absolute; left: calc(50% + 14px); top: 50%; transform: translateY(-50%);
-  font-size: 13px; font-weight: 500; color: var(--ink); white-space: nowrap; pointer-events: none;
+  font-family: var(--serif); font-size: 15px; font-weight: 400; color: var(--ink); white-space: nowrap; pointer-events: none;
   text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg), 0 0 6px var(--bg);
 }
 .pin.sx span { left: auto; right: calc(50% + 14px); }
 .pin.muta span { display: none; }
 .pin span small { font-weight: 400; font-size: 12px; color: var(--muted); margin-left: 5px; }
 
-/* Pannello a fianco della mappa */
+/* Pannello sotto la mappa */
+.panel h2, .panel .sub, .panel .empty { text-align: center; }
 .panel h2 { font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1.15; margin: 0 0 4px; }
 .panel .sub { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
 .panel .back-link { background: none; border: 0; padding: 0; margin: 0 0 14px; color: var(--muted); font-size: 14px; }
@@ -92,7 +97,7 @@ header { display: flex; align-items: flex-start; justify-content: space-between;
 .thumbs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 
 /* le cartoline di una zona, impilate */
-.mazzetto { position: relative; display: block; width: 86%; aspect-ratio: 3 / 2; margin: 22px auto 0; padding: 0; background: none; border: 0; }
+.mazzetto { position: relative; display: block; width: min(86%, 420px); aspect-ratio: 3 / 2; margin: 22px auto 0; padding: 0; background: none; border: 0; }
 .mazzetto img {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 2px;
   box-shadow: 0 1px 2px rgba(0,0,0,.1), 0 12px 24px -16px rgba(0,0,0,.5); transition: transform .25s ease;
@@ -106,22 +111,20 @@ header { display: flex; align-items: flex-start; justify-content: space-between;
 .mazzetto-cap span { display: block; font-family: var(--sans); font-size: 13px; color: var(--muted); margin-top: 2px; }
 .panel .empty { color: var(--muted); }
 
-/* elenco delle zone, tipo "scegli il livello" */
-.levels { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); counter-reset: livello; }
+/* le zone, sotto la mappa: una griglia di tessere tipo francobollo */
+.levels { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
 .levels button {
-  display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; width: 100%;
-  padding: 14px 0; background: none; border: 0; border-bottom: 1px solid var(--line); text-align: left;
-  transition: padding-left .2s ease;
+  display: flex; flex-direction: column; gap: 10px; width: 100%; height: 100%; padding: 16px 16px 14px; text-align: left;
+  background: var(--paper); border: 1.5px dashed color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 4px;
+  transition: transform .2s ease, border-color .2s ease;
 }
-.levels button::before {
-  counter-increment: livello; content: counter(livello, decimal-leading-zero);
-  font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums;
-}
-.levels button:hover { padding-left: 6px; }
-.levels button:hover::before { color: var(--accent); }
+.levels button:hover { transform: translateY(-3px) rotate(-1deg); border-color: var(--accent); }
 .levels .n { font-family: var(--serif); font-size: 22px; line-height: 1.2; display: block; }
 .levels .d { color: var(--muted); font-size: 13px; display: block; }
-.levels .c { color: var(--muted); font-size: 13px; white-space: nowrap; }
+.levels .c { color: var(--muted); font-size: 13px; white-space: nowrap; margin-top: auto; }
+/* le zone ancora senza cartoline sono spente */
+.levels .vuota { border-color: var(--line); }
+.levels .vuota .n, .levels .vuota .d { opacity: .45; }
 
 .thumb { display: block; width: 100%; padding: 0; background: none; border: 0; text-align: left; }
 .thumb img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 2px; transition: transform .25s ease; }
@@ -202,7 +205,7 @@ footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
 
 @media (max-width: 860px) {
   .stage { grid-template-columns: 1fr; gap: 28px; }
-  .map { height: min(62vh, 460px); }
+  .map { height: min(58vh, 460px); }
   .row { grid-template-columns: 84px minmax(0, 1fr); }
   .row img { width: 84px; }
   .row .w { display: none; }
