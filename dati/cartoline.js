@@ -349,5 +349,465 @@ window.PAUSILYPON_CARTOLINE = [
     "sticker": "limoni",
     "foto": "img-9741.jpg",
     "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4133.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Moschea Blu",
+    "area": "istanbul",
+    "luogo": "Moschea Blu",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4137.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Moschea Blu",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4138.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Moschea Blu",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4149.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Moschea Blu",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4152.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Moschea Blu",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4156.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4162.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4165.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Hagia Sofia",
+    "area": "istanbul",
+    "luogo": "Santa Sofia",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4168.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Moschea Blu",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4173.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Moschea Blu",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4181.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4188.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4193.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Venditore di Tappeti",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4196.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4197.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Cena Turca!",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4199.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "La Moschea illuminata",
+    "area": "istanbul",
+    "luogo": "Moschea Blu",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4204.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4206.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4207.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4209.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Labirinto di Colonne",
+    "area": "istanbul",
+    "luogo": "Basilica cisterna",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4226.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Testa di Medusa",
+    "area": "istanbul",
+    "luogo": "Basilica cisterna",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4237.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4257.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Torre di Galata",
+    "area": "istanbul",
+    "luogo": "Galata",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4266.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4269.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Galata",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4274.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Come to Galatasaray",
+    "area": "istanbul",
+    "luogo": "Galata",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4278.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "No pictures!",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4296.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4299.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4302.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4303.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Gatto turco",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4313.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4314.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4329.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4330.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4337.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Bazar delle Spezie",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4342.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4347.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4354.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4356.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Mezzaluna e la stella",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4370.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Pesca nello stretto",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4376.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4379.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4380.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "L'ingresso del Bazar",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4382.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Il Sultano",
+    "area": "istanbul",
+    "luogo": "Istanbul",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "moschea",
+    "foto": "img-4392.jpg",
+    "autore": "Raffaele"
   }
 ];

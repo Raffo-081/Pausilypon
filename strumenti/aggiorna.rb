@@ -127,6 +127,7 @@ cartoline = []
 usate = []
 nuove = 0
 conteggio = {}
+sticker_ignoti = {}
 
 fonti.each do |fonte|
   e = fonte[:etichetta]
@@ -158,7 +159,7 @@ fonti.each do |fonte|
     c['sticker'] = c['sticker'].downcase
     c['sticker'] = SINONIMI[c['sticker']] || c['sticker']
     avvisi << "#{e}riga #{riga} (#{c['titolo']}): la zona \"#{c['area']}\" non esiste. Zone valide: #{zone.join(', ')}." unless zone.include?(c['area'])
-    avvisi << "#{e}riga #{riga} (#{c['titolo']}): lo sticker \"#{c['sticker']}\" non esiste, uso il sole. Sticker validi: #{sticker.join(', ')}." unless c['sticker'].empty? || sticker.include?(c['sticker'])
+    (sticker_ignoti[c['sticker']] ||= []) << "#{e}riga #{riga}" unless c['sticker'].empty? || sticker.include?(c['sticker'])
 
     unless c['foto'].empty?
       if (orig = trova(fonte[:foto], c['foto']))
@@ -202,6 +203,10 @@ File.write(index, File.read(index).gsub(/((?:css|js|dati)\/[\w.-]+?\.(?:css|js))
 
 puts "Cartoline: #{cartoline.size} (#{cartoline.count { |c| !c['foto'].empty? }} con foto vera, #{nuove} foto convertite adesso)"
 puts "Per autore: " + conteggio.map { |a, n| "#{a} #{n}" }.join(', ')
+# uno sticker sconosciuto lo segnalo una volta sola, con le righe in cui compare
+sticker_ignoti.each do |nome, dove|
+  avvisi << "lo sticker \"#{nome}\" non esiste (#{dove.size} cartoline: #{dove.first(4).join(', ')}#{dove.size > 4 ? '...' : ''}): per ora uso il sole. Sticker validi: #{sticker.join(', ')}."
+end
 senza_testo = cartoline.select { |c| c['testo'].to_s.empty? }
 puts "Ancora senza testo (#{senza_testo.size}): " + senza_testo.map { |c| "#{c['titolo'].empty? ? c['luogo'] : c['titolo']} (#{c['autore']})" }.join(', ') unless senza_testo.empty?
 if avvisi.empty?
