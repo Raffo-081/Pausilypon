@@ -155,7 +155,7 @@
 
   function thumb(c, showWhere) {
     return '<button type="button" class="thumb" data-card="' + c.id + '"><img src="' + c.thumb + '" alt="" loading="lazy">' +
-      '<span class="cap">' + esc(c.titolo) + '</span>' +
+      (c.titolo ? '<span class="cap">' + esc(c.titolo) + '</span>' : '') +
       '<span class="where">' + esc((showWhere ? c.luogo + ', ' + c.data : c.luogo) + (showWhere && c.autore ? ' \u00b7 ' + c.autore : '')) + '</span></button>';
   }
   function renderPanel() {
@@ -190,7 +190,7 @@
   function renderList() {
     document.getElementById('v-list').innerHTML = CARDS.map(function (c) {
       return '<button type="button" class="row" data-card="' + c.id + '"><img src="' + c.thumb + '" alt="" loading="lazy">' +
-        '<span><span class="t">' + esc(c.titolo) + '</span><span class="m">' + esc(c.testo) + '</span></span>' +
+        '<span>' + (c.titolo ? '<span class="t">' + esc(c.titolo) + '</span>' : '') + '<span class="m">' + esc(c.testo || (c.titolo ? '' : c.luogo + ', ' + c.data)) + '</span></span>' +
         '<span class="w">' + esc(c.luogo + ', ' + c.data) + (c.autore ? '<br>' + esc(c.autore) : '') + '</span></button>';
     }).join('');
   }
@@ -248,7 +248,7 @@
   }
   // Le righe dell indirizzo: titolo, luogo e zona (senza ripetere due volte la stessa parola).
   function righeHtml(c) {
-    var z = zona(c.area), righe = [c.titolo];
+    var z = zona(c.area), righe = c.titolo ? [c.titolo] : [];
     if (c.luogo && c.luogo !== c.titolo) righe.push(c.luogo);
     if (z && righe.indexOf(z.nome) < 0) righe.push(z.nome);
     while (righe.length < 3) righe.push('');
@@ -263,10 +263,13 @@
     var c = ctx[pos];
     cardEl.classList.remove('flipped');
     cardEl.innerHTML = '<div class="inner">' +
-      '<div class="face front"><img src="' + c.img + '" alt="' + esc(c.titolo) + '"></div>' +
-      '<div class="face back"><span class="mark"><svg class="logo" aria-hidden="true"><use href="#logo"/></svg>Pausilypon</span><i class="mezzo"></i><p class="msg">' + esc(c.testo) + '</p>' + righeHtml(c) + timbroHtml(c) +
+      '<div class="face front"><img src="' + c.img + '" alt="' + esc(c.titolo || c.luogo) + '"></div>' +
+      '<div class="face back' + (c.testo ? '' : ' muta') + '"><span class="mark"><svg class="logo" aria-hidden="true"><use href="#logo"/></svg>Pausilypon</span><i class="mezzo"></i><p class="msg">' + esc(c.testo) + '</p>' + righeHtml(c) + timbroHtml(c) +
       (c.autore ? '<span class="firma">' + esc(c.autore) + '</span>' : '') + '<span class="meta">' + esc(c.luogo + ', ' + c.data) + '</span>' + stampHtml(c) + '</div></div>';
-    document.getElementById('cap-title').textContent = c.titolo === c.luogo ? c.titolo : c.titolo + ' — ' + c.luogo;
+    // sotto la cartolina: titolo e luogo; se il titolo non c'è resta solo una riga piccola con luogo e data
+    var did = document.getElementById('cap-title');
+    did.classList.toggle('sotto', !c.titolo);
+    did.textContent = !c.titolo ? c.luogo + ', ' + c.data : c.titolo === c.luogo ? c.titolo : c.titolo + ' \u2014 ' + c.luogo;
     document.getElementById('prev').disabled = document.getElementById('next').disabled = ctx.length < 2;
     sotto(document.getElementById('pila1'), 1);
     sotto(document.getElementById('pila2'), 2);

@@ -150,7 +150,6 @@ fonti.each do |fonte|
     c['data'] = data_leggibile(c['data'])
     c['area'] = c['area'].downcase
     c['sticker'] = c['sticker'].downcase
-    avvisi << "#{e}riga #{riga}: manca il titolo." if c['titolo'].empty?
     avvisi << "#{e}riga #{riga} (#{c['titolo']}): la zona \"#{c['area']}\" non esiste. Zone valide: #{zone.join(', ')}." unless zone.include?(c['area'])
     avvisi << "#{e}riga #{riga} (#{c['titolo']}): lo sticker \"#{c['sticker']}\" non esiste, uso il sole. Sticker validi: #{sticker.join(', ')}." unless c['sticker'].empty? || sticker.include?(c['sticker'])
 
@@ -196,6 +195,8 @@ File.write(index, File.read(index).gsub(/((?:css|js|dati)\/[\w.-]+?\.(?:css|js))
 
 puts "Cartoline: #{cartoline.size} (#{cartoline.count { |c| !c['foto'].empty? }} con foto vera, #{nuove} foto convertite adesso)"
 puts "Per autore: " + conteggio.map { |a, n| "#{a} #{n}" }.join(', ')
+senza_testo = cartoline.select { |c| c['testo'].to_s.empty? }
+puts "Ancora senza testo (#{senza_testo.size}): " + senza_testo.map { |c| "#{c['titolo'].empty? ? c['luogo'] : c['titolo']} (#{c['autore']})" }.join(', ') unless senza_testo.empty?
 if avvisi.empty?
   puts 'Nessun problema trovato.'
 else

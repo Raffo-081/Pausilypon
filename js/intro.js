@@ -29,6 +29,10 @@
   ];
   var PASSO = 48;                    // larghezza di un'onda, nel suo disegno
 
+  // quanta parte della scena (larga 1200) si vede davvero, in base alla forma dello schermo
+  function larghezzaVisibile() {
+    return window.innerHeight > 0 ? Math.min(1200, 700 * window.innerWidth / window.innerHeight) : 1200;
+  }
   function nodo(nome, attr, padre) {
     var n = document.createElementNS(NS, nome);
     for (var k in attr) n.setAttribute(k, attr[k]);
@@ -42,7 +46,7 @@
     3: { lato: -0.74, y: 512, s: 0.8, verso: 1, durata: 1.6 }
   };
   function coda(c) {
-    var x = 600 + c.lato * Math.min(1200, 700 * window.innerWidth / window.innerHeight) / 2;
+    var x = 600 + c.lato * larghezzaVisibile() / 2;
     var g = nodo('g', { transform: 'translate(' + x.toFixed(0) + ' ' + c.y + ') scale(' + (c.s * c.verso) + ' ' + c.s + ')' }, mare);
     g.innerHTML = '<g class="coda" style="animation-duration:' + c.durata + 's">' +
       '<path d="M-8 10Q-10 -14 2 -25Q5 -12 9 10Z" fill="#24325c" stroke="#8EA8FF" stroke-width="1.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>' +
@@ -64,7 +68,7 @@
       }
       return 'M' + fuori.concat(dentro).join('L') + 'Z';
     }
-    var x = 600 + c.lato * Math.min(1200, 700 * window.innerWidth / window.innerHeight) / 2;
+    var x = 600 + c.lato * larghezzaVisibile() / 2;
     var taglio = nodo('clipPath', { id: 'intro-pelo' }, mare);
     nodo('rect', { x: -160, y: -160, width: 320, height: 160 - FONDO }, taglio);
     var g = nodo('g', { transform: 'translate(' + x.toFixed(0) + ' ' + (c.pelo + FONDO * c.s) + ') scale(' + (c.s * c.verso) + ' ' + c.s + ')', 'clip-path': 'url(#intro-pelo)' }, mare);
@@ -115,7 +119,7 @@
   // Capri con i Faraglioni deve starci tutta: su schermi stretti la rimpicciolisco e la tengo al centro.
   var isola = intro.querySelector('.intro-isola'), sole = intro.querySelector('.intro-sole');
   function adatta() {
-    var visibile = Math.min(1200, 700 * window.innerWidth / window.innerHeight);
+    var visibile = larghezzaVisibile();
     isola.style.transform = 'translateX(36px) scale(' + Math.min(1, (visibile - 30) / 690).toFixed(3) + ')';
     // il sole: in alto a destra su schermi larghi; su quelli stretti più piccolo, tra il titolo e l'isola
     var s = visibile >= 900 ? 1 : Math.max(0.5, visibile / 1200);

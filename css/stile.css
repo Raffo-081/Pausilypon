@@ -212,8 +212,18 @@ footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
 .tb-mese { fill: currentColor; font-family: var(--sans); font-size: 11px; letter-spacing: 1.5px; }
 .tb-anno { fill: currentColor; font-family: var(--serif); font-size: 17px; }
 
+/* Cartolina senza testo: niente divisione in due, francobollo e timbro al centro e più grandi, titolo e luogo sotto */
+.back.muta .mezzo, .back.muta .meta, .back.muta .msg { display: none; }
+.back.muta .francobollo { right: auto; left: 52cqw; top: 13cqw; width: 19cqw; }
+.back.muta .timbro { right: auto; left: 27cqw; top: 14cqw; width: 31cqw; }
+.back.muta .righe { left: 18cqw; right: 18cqw; bottom: 7cqw; text-align: center; }
+.back.muta .righe span { border-bottom: 0; height: auto; line-height: 1.35; font-size: 2.3cqw; color: var(--tenue); }
+.back.muta .righe span:first-child { font-size: 3.6cqw; color: var(--inchiostro); }
+.back.muta .firma { left: auto; right: 5cqw; bottom: 5cqw; }
+
 .caption { text-align: center; max-width: 60ch; }
 .caption .title { font-family: var(--serif); font-size: 22px; margin: 0; }
+.caption .title.sotto { font-family: var(--sans); font-size: 14px; color: var(--muted); }
 .caption .hint { color: var(--muted); font-size: 14px; margin: 2px 0 0; }
 
 @media (max-width: 860px) {
