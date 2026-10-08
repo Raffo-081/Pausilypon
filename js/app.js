@@ -156,7 +156,7 @@
   function thumb(c, showWhere) {
     return '<button type="button" class="thumb" data-card="' + c.id + '"><img src="' + c.thumb + '" alt="" loading="lazy">' +
       '<span class="cap">' + esc(c.titolo) + '</span>' +
-      '<span class="where">' + esc(showWhere ? c.luogo + ', ' + c.data : c.luogo) + '</span></button>';
+      '<span class="where">' + esc((showWhere ? c.luogo + ', ' + c.data : c.luogo) + (showWhere && c.autore ? ' \u00b7 ' + c.autore : '')) + '</span></button>';
   }
   function renderPanel() {
     var el = document.getElementById('panel');
@@ -191,7 +191,7 @@
     document.getElementById('v-list').innerHTML = CARDS.map(function (c) {
       return '<button type="button" class="row" data-card="' + c.id + '"><img src="' + c.thumb + '" alt="" loading="lazy">' +
         '<span><span class="t">' + esc(c.titolo) + '</span><span class="m">' + esc(c.testo) + '</span></span>' +
-        '<span class="w">' + esc(c.luogo + ', ' + c.data) + '</span></button>';
+        '<span class="w">' + esc(c.luogo + ', ' + c.data) + (c.autore ? '<br>' + esc(c.autore) : '') + '</span></button>';
     }).join('');
   }
   function setView(v) {
@@ -213,9 +213,46 @@
   // ---------- Cartolina ----------
   var modal = document.getElementById('modal'), cardEl = document.getElementById('card');
   var lastFocus = null;
+  // Il francobollo, in stile greco: cornice, due fasce di greca, lo sticker della cartolina e il nome del luogo.
+  // I due colori sono quelli del luogo (se in zone.js ne ha di suoi) oppure quelli della zona.
+  function coloriDi(c) {
+    var z = zona(c.area) || {};
+    return (z.luoghi && z.luoghi[c.luogo]) || z.colori || ['#2347C5', '#F2EDE1'];
+  }
   function stampHtml(c) {
-    return '<div class="stamp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-      (GLYPH[c.sticker] || GLYPH.sole) + '</svg><span>' + esc(c.luogo) + '</span></div>';
+    var col = coloriDi(c);
+    return '<div class="francobollo"><svg viewBox="0 0 80 100" aria-hidden="true" style="--fb-fondo:' + col[0] + ';--fb-segno:' + col[1] + '">' +
+      '<defs><pattern id="fb-greca" x="11" y="11" width="8.2857" height="8" patternUnits="userSpaceOnUse"><path d="M0 7H6.6V1H1.7V4.8H4.4V3M6.6 7H8.3" class="fb-segno" fill="none" stroke-width="1"/></pattern></defs>' +
+      '<rect width="80" height="100" class="fb-fondo"/>' +
+      '<rect width="80" height="100" class="fb-denti" fill="none" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0 8.18"/>' +
+      '<rect x="8.5" y="8.5" width="63" height="83" class="fb-segno" fill="none" stroke-width="1.1"/>' +
+      '<rect x="11" y="11" width="58" height="8" fill="url(#fb-greca)"/><rect x="11" y="81" width="58" height="8" fill="url(#fb-greca)"/>' +
+      '<path d="M11 20.5H69M11 79.5H69" class="fb-segno" stroke-width=".8"/>' +
+      '<g transform="translate(22 25) scale(1.5)" class="fb-segno" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + (GLYPH[c.sticker] || GLYPH.sole) + '</g>' +
+      '<text x="40" y="74" text-anchor="middle" class="fb-luogo" textLength="' + Math.min(54, c.luogo.length * 6.2) + '" lengthAdjust="spacingAndGlyphs">' + esc(c.luogo.toUpperCase()) + '</text></svg></div>';
+  }
+  // Il timbro postale: il nome del sito e della zona in tondo, mese e anno al centro, le onde dell annullo a lato.
+  function timbroHtml(c) {
+    var z = zona(c.area), giro = 'PAUSILYPON \u00b7 ' + (z ? z.nome : c.luogo).toUpperCase() + ' \u00b7 ';
+    if (giro.length < 24) giro += giro;
+    var parti = String(c.data).trim().split(/\s+/), anno = /^\d{4}$/.test(parti[parti.length - 1]) ? parti.pop() : '';
+    var sopra = parti.join(' ').toUpperCase();
+    return '<div class="timbro"><svg viewBox="0 0 170 110" aria-hidden="true">' +
+      '<g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="112" cy="55" r="50"/><circle cx="112" cy="55" r="33"/>' +
+      '<path d="M2 34q9-8 18 0t18 0t18 0M2 48q9-8 18 0t18 0t18 0M2 62q9-8 18 0t18 0t18 0M2 76q9-8 18 0t18 0t18 0" stroke-linecap="round"/></g>' +
+      '<text class="tb-giro" textLength="252" lengthAdjust="spacing"><textPath href="#timbro-giro" textLength="252" lengthAdjust="spacing">' + esc(giro) + '</textPath></text>' +
+      (anno
+        ? '<text x="112" y="52" text-anchor="middle" class="tb-mese">' + esc(sopra) + '</text><text x="112" y="68" text-anchor="middle" class="tb-anno">' + anno + '</text>'
+        : '<text x="112" y="59" text-anchor="middle" class="tb-mese">' + esc(sopra) + '</text>') +
+      '</svg></div>';
+  }
+  // Le righe dell indirizzo: titolo, luogo e zona (senza ripetere due volte la stessa parola).
+  function righeHtml(c) {
+    var z = zona(c.area), righe = [c.titolo];
+    if (c.luogo && c.luogo !== c.titolo) righe.push(c.luogo);
+    if (z && righe.indexOf(z.nome) < 0) righe.push(z.nome);
+    while (righe.length < 3) righe.push('');
+    return '<div class="righe">' + righe.map(function (r) { return '<span>' + esc(r) + '</span>'; }).join('') + '</div>';
   }
   // le cartolina che si intravedono sotto quella in primo piano
   function sotto(el, k) {
@@ -227,8 +264,8 @@
     cardEl.classList.remove('flipped');
     cardEl.innerHTML = '<div class="inner">' +
       '<div class="face front"><img src="' + c.img + '" alt="' + esc(c.titolo) + '"></div>' +
-      '<div class="face back"><span class="mark"><svg class="logo" aria-hidden="true"><use href="#logo"/></svg>Pausilypon</span><p class="msg">' + esc(c.testo) + '</p><div class="lines"><i></i><i></i><i></i></div>' +
-      '<span class="meta">' + esc(c.luogo + ', ' + c.data) + '</span>' + stampHtml(c) + '</div></div>';
+      '<div class="face back"><span class="mark"><svg class="logo" aria-hidden="true"><use href="#logo"/></svg>Pausilypon</span><i class="mezzo"></i><p class="msg">' + esc(c.testo) + '</p>' + righeHtml(c) + timbroHtml(c) +
+      (c.autore ? '<span class="firma">' + esc(c.autore) + '</span>' : '') + '<span class="meta">' + esc(c.luogo + ', ' + c.data) + '</span>' + stampHtml(c) + '</div></div>';
     document.getElementById('cap-title').textContent = c.titolo === c.luogo ? c.titolo : c.titolo + ' — ' + c.luogo;
     document.getElementById('prev').disabled = document.getElementById('next').disabled = ctx.length < 2;
     sotto(document.getElementById('pila1'), 1);

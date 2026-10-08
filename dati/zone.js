@@ -3,6 +3,8 @@
 //   id      nome breve senza spazi: è quello che scrivi nella colonna "area" delle cartoline
 //   nome    nome mostrato sul sito
 //   dove    riga piccola sotto il nome
+//   colori  i due colori del francobollo per le cartoline di questa zona: [fondo, disegno]
+//   luoghi  (facoltativo) colori diversi per singoli luoghi della zona, scritti come nella colonna "luogo"
 //   tipo    "disegnata" = area disegnata a mano, approssimata: viene arrotondata e tratteggiata
 //           "punto"     = nessuna area, solo un puntino
 //   centro  [longitudine, latitudine] del marcatore
@@ -14,6 +16,14 @@ window.PAUSILYPON_ZONE = [
     id: 'napoli',
     nome: 'Napoli',
     dove: 'Golfo, isole e Costiera Amalfitana',
+    colori: ['#1389C9', '#F2EDE1'],          // azzurro Napoli
+    luoghi: {
+      'Capri': ['#1B4FA8', '#F2EDE1'],             // blu Grotta Azzurra
+      'Positano': ['#E9B93A', '#2F4A1C'],          // giallo limone e verde foglia
+      'Procida': ['#E7917D', '#2B2340'],           // rosa delle case della Corricella
+      'Pompei': ['#A3271F', '#F2EDE1'],            // rosso pompeiano
+      'Ischia': ['#2E7D5B', '#F2EDE1']             // l isola verde
+    },
     tipo: 'disegnata',
     centro: [14.25, 40.84],
     forma: [
@@ -37,6 +47,7 @@ window.PAUSILYPON_ZONE = [
     id: 'salerno',
     nome: 'Salerno e Cilento',
     dove: 'Da Salerno a Sapri',
+    colori: ['#5E7A3A', '#F2EDE1'],          // verde ulivo
     tipo: 'disegnata',
     centro: [15.25, 40.35],
     forma: [
@@ -49,6 +60,7 @@ window.PAUSILYPON_ZONE = [
     id: 'roma',
     nome: 'Roma',
     dove: 'Italia',
+    colori: ['#8E1B1B', '#E9C46A'],          // porpora e oro
     tipo: 'punto',
     centro: [12.50, 41.90]
   },
@@ -56,6 +68,7 @@ window.PAUSILYPON_ZONE = [
     id: 'dublino',
     nome: 'Dublino',
     dove: 'Irlanda',
+    colori: ['#1E7A4C', '#F2EDE1'],          // verde irlandese
     tipo: 'punto',
     centro: [-6.26, 53.35]
   },
@@ -63,6 +76,7 @@ window.PAUSILYPON_ZONE = [
     id: 'lofoten',
     nome: 'Lofoten',
     dove: 'Norvegia, oltre il Circolo Polare',
+    colori: ['#B3261E', '#F2EDE1'],          // rosso delle casette dei pescatori
     tipo: 'disegnata',
     centro: [14.0, 68.2],
     forma: [
@@ -74,6 +88,7 @@ window.PAUSILYPON_ZONE = [
     id: 'oslo',
     nome: 'Oslo',
     dove: 'Norvegia',
+    colori: ['#00205B', '#F2EDE1'],          // blu della bandiera norvegese
     tipo: 'punto',
     centro: [10.75, 59.91]
   },
@@ -81,6 +96,7 @@ window.PAUSILYPON_ZONE = [
     id: 'caponord',
     nome: 'Capo Nord',
     dove: 'Troms e Finnmark, Norvegia',
+    colori: ['#E07B2A', '#1B1F3A'],          // arancio del sole di mezzanotte
     tipo: 'disegnata',
     centro: [25.78, 71.0],
     forma: [
@@ -93,6 +109,7 @@ window.PAUSILYPON_ZONE = [
     id: 'svalbard',
     nome: 'Isole Svalbard',
     dove: 'Norvegia, Mar Glaciale Artico',
+    colori: ['#BFE0EA', '#173042'],          // azzurro ghiaccio
     tipo: 'disegnata',
     centro: [16.0, 78.5],
     forma: [
@@ -104,6 +121,7 @@ window.PAUSILYPON_ZONE = [
     id: 'istanbul',
     nome: 'Istanbul',
     dove: 'Turchia',
+    colori: ['#14868C', '#F2EDE1'],          // turchese delle maioliche
     tipo: 'punto',
     centro: [28.98, 41.01]
   }

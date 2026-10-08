@@ -8,3 +8,8 @@ foto/
 ~$*
 .claude/
 
+# bozze di design: prove che non fanno parte del sito
+bozze/
+
+# le cartelle degli amici con i loro fogli e le foto originali: online vanno solo le copie in foto-web
+amici/

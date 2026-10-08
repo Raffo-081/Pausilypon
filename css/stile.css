@@ -184,19 +184,33 @@ footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
   box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 24px 48px -24px rgba(0,0,0,.45);
 }
 .front img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.back { transform: rotateY(180deg); background: var(--paper); }
-.back .mark { position: absolute; left: 5cqw; top: 5cqw; font-family: var(--serif); font-weight: 300; font-size: clamp(12px, 2.4cqw, 18px); letter-spacing: .04em; }
-.back .msg { position: absolute; left: 5cqw; top: 18cqw; width: 52cqw; margin: 0; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(12px, 2.9cqw, 22px); line-height: 1.5; }
-.back .lines { position: absolute; right: 5cqw; top: 15cqw; width: 30cqw; }
-.back .lines i { display: block; height: 1px; background: var(--line); margin-bottom: 4.2cqw; }
-.back .meta { position: absolute; left: 5cqw; bottom: 5cqw; color: var(--muted); font-size: clamp(10px, 1.9cqw, 14px); }
-.stamp {
-  position: absolute; right: 5cqw; bottom: 5cqw; width: clamp(56px, 12cqw, 92px); aspect-ratio: 4 / 5; transform: rotate(-4deg);
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 0 4px;
-  border: 1.5px dashed var(--accent); color: var(--accent); border-radius: 2px;
-  font-size: clamp(8px, 1.5cqw, 12px); line-height: 1.15; text-align: center;
+/* Il retro: carta color crema come una cartolina vera. A sinistra il messaggio, a destra francobollo, timbro e righe dell indirizzo. */
+.back {
+  transform: rotateY(180deg);
+  --carta: #F2EDE1; --inchiostro: #1c2333; --tenue: #7b7566; --riga: #cfc6b2; --blu: #2347C5;
+  background: var(--carta); color: var(--inchiostro);
 }
-.stamp svg { width: 46%; height: auto; }
+.back .mark { position: absolute; left: 5cqw; top: 4.4cqw; font-family: var(--serif); font-weight: 300; font-size: clamp(11px, 2.5cqw, 19px); letter-spacing: .04em; }
+.back .mark .logo { color: var(--blu); }
+.back .mezzo { position: absolute; left: 56cqw; top: 13cqw; bottom: 6cqw; width: 1px; background: var(--riga); }
+.back .msg { position: absolute; left: 5cqw; top: 15cqw; width: 46cqw; margin: 0; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(11px, 2.9cqw, 22px); line-height: 1.5; }
+/* la firma di chi ha scritto la cartolina */
+.back .firma { position: absolute; left: 5cqw; bottom: 8.4cqw; font-family: var(--serif); font-style: italic; font-size: clamp(11px, 3.1cqw, 23px); }
+.back .firma::before { content: "\2014\00a0"; }
+.back .meta { position: absolute; left: 5cqw; bottom: 5cqw; color: var(--tenue); font-size: clamp(9px, 1.9cqw, 14px); }
+.back .righe { position: absolute; left: 61cqw; right: 5cqw; bottom: 7cqw; }
+.back .righe span { display: block; height: 6cqw; line-height: 7.6cqw; border-bottom: 1px solid var(--riga); font-family: var(--serif); font-size: 2.6cqw; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.back .righe span:first-child { font-size: 3cqw; }
+.francobollo { position: absolute; right: 5cqw; top: 5cqw; width: 13cqw; transform: rotate(3deg); }
+.francobollo svg, .timbro svg { display: block; width: 100%; height: auto; overflow: visible; }
+.fb-fondo { fill: var(--fb-fondo); }
+.fb-denti { stroke: var(--carta); }
+.fb-segno { stroke: var(--fb-segno); }
+.fb-luogo { fill: var(--fb-segno); font-family: var(--serif); font-size: 7px; letter-spacing: 1.2px; }
+.timbro { position: absolute; right: 14cqw; top: 6cqw; width: 21cqw; transform: rotate(-13deg); color: var(--inchiostro); opacity: .8; }
+.tb-giro { fill: currentColor; font-family: var(--sans); font-size: 9.5px; }
+.tb-mese { fill: currentColor; font-family: var(--sans); font-size: 11px; letter-spacing: 1.5px; }
+.tb-anno { fill: currentColor; font-family: var(--serif); font-size: 17px; }
 
 .caption { text-align: center; max-width: 60ch; }
 .caption .title { font-family: var(--serif); font-size: 22px; margin: 0; }

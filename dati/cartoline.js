@@ -1,4 +1,4 @@
-// File scritto da strumenti/aggiorna.rb a partire da cartoline.xlsx: non modificarlo a mano.
+// File scritto da strumenti/aggiorna.rb a partire dai fogli Excel: non modificarlo a mano.
 window.PAUSILYPON_CARTOLINE = [
   {
     "titolo": "Bella Addormentata",
@@ -7,7 +7,8 @@ window.PAUSILYPON_CARTOLINE = [
     "data": "luglio 2025",
     "testo": "Capri è soprannominata \"La Bella Addormentata\" perché vista di profilo sembra una ragazza che dorme",
     "sticker": "faraglioni",
-    "foto": "img-9708.jpg"
+    "foto": "img-9708.jpg",
+    "autore": "Raffaele"
   },
   {
     "titolo": "Dolce Vita",
@@ -16,7 +17,8 @@ window.PAUSILYPON_CARTOLINE = [
     "data": "luglio 2025",
     "testo": "La vista su Positano alla fine del sentiero degli Dei è spettacolare",
     "sticker": "limone",
-    "foto": "img-9743.jpg"
+    "foto": "img-9743.jpg",
+    "autore": "Raffaele"
   },
   {
     "titolo": "Cartolina dalle Lofoten",
@@ -25,7 +27,8 @@ window.PAUSILYPON_CARTOLINE = [
     "data": "aprile 2026",
     "testo": "Una scalata impegnativa, ma la vista vale assolutamente la fatica",
     "sticker": "pesce",
-    "foto": "img-1979.jpg"
+    "foto": "img-1979.jpg",
+    "autore": "Raffaele"
   },
   {
     "titolo": "Å",
@@ -34,7 +37,8 @@ window.PAUSILYPON_CARTOLINE = [
     "data": "aprile 2026",
     "testo": "La città con il nome più corto del mondo. Un piccolissimo villaggio di pescatori sulla punta delle Lofoten, case rosse ovunque e un'acqua super cristallina",
     "sticker": "pesce",
-    "foto": "img-2147.jpg"
+    "foto": "img-2147.jpg",
+    "autore": "Raffaele"
   },
   {
     "titolo": "Arrivo alle Lofoten",
@@ -43,6 +47,7 @@ window.PAUSILYPON_CARTOLINE = [
     "data": "aprile 2026",
     "testo": "Le Lofoten mi danno il benvenuto con una vista spettacolare. Scenari drammatici e montagne innevate che cadono a picco sul mare. Un uomo sul pontile dice anche di aver visto un'orca durante il viaggio in traghetto",
     "sticker": "orca",
-    "foto": "img-2162.jpg"
+    "foto": "img-2162.jpg",
+    "autore": "Raffaele"
   }
 ];
