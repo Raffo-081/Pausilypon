@@ -33,6 +33,12 @@ COLONNE = {
   'foto' => 'foto', 'nome del file della foto' => 'foto', 'file' => 'foto', 'autore' => 'autore'
 }
 OBBLIGATORIE = %w[titolo area luogo data testo sticker foto]
+# modi diversi di scrivere lo stesso sticker
+SINONIMI = {
+  'etna' => 'vulcano', 'vulcani' => 'vulcano', 'onde' => 'onda', 'mare' => 'onda',
+  'montagne' => 'montagna', 'pesci' => 'pesce', 'case' => 'casa', 'casetta' => 'casa', 'barche' => 'barca', 'barchetta' => 'barca',
+  'faraglione' => 'faraglioni', 'orche' => 'orca', 'archi' => 'arco'
+}
 MESI = %w[gennaio febbraio marzo aprile maggio giugno luglio agosto settembre ottobre novembre dicembre]
 
 # ---------- Lettura di un foglio Excel (un .xlsx è uno zip di file XML) ----------
@@ -150,6 +156,7 @@ fonti.each do |fonte|
     c['data'] = data_leggibile(c['data'])
     c['area'] = c['area'].downcase
     c['sticker'] = c['sticker'].downcase
+    c['sticker'] = SINONIMI[c['sticker']] || c['sticker']
     avvisi << "#{e}riga #{riga} (#{c['titolo']}): la zona \"#{c['area']}\" non esiste. Zone valide: #{zone.join(', ')}." unless zone.include?(c['area'])
     avvisi << "#{e}riga #{riga} (#{c['titolo']}): lo sticker \"#{c['sticker']}\" non esiste, uso il sole. Sticker validi: #{sticker.join(', ')}." unless c['sticker'].empty? || sticker.include?(c['sticker'])
 
