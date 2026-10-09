@@ -809,5 +809,255 @@ window.PAUSILYPON_CARTOLINE = [
     "sticker": "moschea",
     "foto": "img-4392.jpg",
     "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Costiera Amalfitana",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-9857.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Costiera Amalfitana",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-9861.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Costiera Amalfitana",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-9863.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Il ponte sul fiordo",
+    "area": "napoli",
+    "luogo": "Fiordo di Furore",
+    "data": "luglio 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-9866.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Terrazza su Capri",
+    "area": "napoli",
+    "luogo": "Termini",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0669.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Il bar del paese",
+    "area": "napoli",
+    "luogo": "Termini",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0672.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0677.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0678-2.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0681.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0682.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0688.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0690.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0694.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0698.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0704.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0706.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Baia delle Sirene",
+    "area": "napoli",
+    "luogo": "Baia di Ieranto",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0716-2.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0717.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0718.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0723.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0726.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0727.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Miez' o' Mar",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0730.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0734.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Punta Campanella",
+    "data": "ottobre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-0739.jpg",
+    "autore": "Raffaele"
   }
 ];
