@@ -208,7 +208,12 @@ sticker_ignoti.each do |nome, dove|
   avvisi << "lo sticker \"#{nome}\" non esiste (#{dove.size} cartoline: #{dove.first(4).join(', ')}#{dove.size > 4 ? '...' : ''}): per ora uso il sole. Sticker validi: #{sticker.join(', ')}."
 end
 senza_testo = cartoline.select { |c| c['testo'].to_s.empty? }
-puts "Ancora senza testo (#{senza_testo.size}): " + senza_testo.map { |c| "#{c['titolo'].empty? ? c['luogo'] : c['titolo']} (#{c['autore']})" }.join(', ') unless senza_testo.empty?
+# promemoria: poche cartoline le elenco per nome, tante le conto per zona
+if senza_testo.size.between?(1, 12)
+  puts "Ancora senza testo (#{senza_testo.size}): " + senza_testo.map { |c| "#{c['titolo'].empty? ? c['luogo'] : c['titolo']} (#{c['autore']})" }.join(', ')
+elsif senza_testo.size > 12
+  puts "Ancora senza testo: #{senza_testo.size} su #{cartoline.size} (" + senza_testo.group_by { |c| c['area'] }.map { |z, v| "#{z} #{v.size}" }.join(', ') + ')'
+end
 if avvisi.empty?
   puts 'Nessun problema trovato.'
 else

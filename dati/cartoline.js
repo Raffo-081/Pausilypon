@@ -876,7 +876,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0677.jpg",
     "autore": "Raffaele"
   },
@@ -886,7 +886,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0678-2.jpg",
     "autore": "Raffaele"
   },
@@ -896,7 +896,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0681.jpg",
     "autore": "Raffaele"
   },
@@ -906,7 +906,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0682.jpg",
     "autore": "Raffaele"
   },
@@ -916,7 +916,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0688.jpg",
     "autore": "Raffaele"
   },
@@ -926,7 +926,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0690.jpg",
     "autore": "Raffaele"
   },
@@ -936,7 +936,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0694.jpg",
     "autore": "Raffaele"
   },
@@ -946,7 +946,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0698.jpg",
     "autore": "Raffaele"
   },
@@ -956,7 +956,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0704.jpg",
     "autore": "Raffaele"
   },
@@ -966,7 +966,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0706.jpg",
     "autore": "Raffaele"
   },
@@ -976,7 +976,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Baia di Ieranto",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0716-2.jpg",
     "autore": "Raffaele"
   },
@@ -986,7 +986,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0717.jpg",
     "autore": "Raffaele"
   },
@@ -996,7 +996,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0718.jpg",
     "autore": "Raffaele"
   },
@@ -1006,7 +1006,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0723.jpg",
     "autore": "Raffaele"
   },
@@ -1016,7 +1016,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0726.jpg",
     "autore": "Raffaele"
   },
@@ -1026,7 +1026,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0727.jpg",
     "autore": "Raffaele"
   },
@@ -1036,7 +1036,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0730.jpg",
     "autore": "Raffaele"
   },
@@ -1046,7 +1046,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0734.jpg",
     "autore": "Raffaele"
   },
@@ -1056,8 +1056,728 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Punta Campanella",
     "data": "ottobre 2025",
     "testo": "",
-    "sticker": "limoni",
+    "sticker": "sirena",
     "foto": "img-0739.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Sorrento",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-5830.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Sorrento",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-5833.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Natale e Maradona",
+    "area": "napoli",
+    "luogo": "Sorrento",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-5838.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Sorrento",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "limoni",
+    "foto": "img-5844.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5848.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5852.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5863.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5868.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5869.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5873.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5882.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5883.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5893.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Università della Strada",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5896.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5898.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5901.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5903.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5905.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5906.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5907.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5912.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5914.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Stai mman all'arte",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5918.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5920.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5921.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Sacro e Profano",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5928.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "San Gennà",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5932.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5939.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Arte Presepiale",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5943.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5945.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5947.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5948.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5953.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5957.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5959.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "4",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5960.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Muri puliti, Popoli muti",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5963.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Libri scolastici",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5964.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5965.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Quartieri Spagnoli",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5969.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5970.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5972.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5978.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "D10S",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-5990.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6000.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Napulitan'",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6009.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6013.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6017.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6018.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Panni stesi",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6022.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6025.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6032.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6035.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Bene Assaje",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6044.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6045.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Elemosina",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6049.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "o' cafè",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6050.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6076.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Plebiscito",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6078.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Pulcinella",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6079.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6086.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6088.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Dopo-scuola",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6089.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6095.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "081",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6102.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6109.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6117.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "o' castell' ngopp o' mar",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6126.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6150.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "o' scalon'",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6153.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6158.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Toledo sotto il mare",
+    "area": "napoli",
+    "luogo": "Napoli",
+    "data": "dicembre 2025",
+    "testo": "",
+    "sticker": "vesuvio",
+    "foto": "img-6162.jpg",
     "autore": "Raffaele"
   }
 ];
