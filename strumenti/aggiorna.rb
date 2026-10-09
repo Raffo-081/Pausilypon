@@ -35,6 +35,7 @@ COLONNE = {
 OBBLIGATORIE = %w[titolo area luogo data testo sticker foto]
 # modi diversi di scrivere lo stesso sticker
 SINONIMI = {
+  'orso polare' => 'orso', 'orso bianco' => 'orso', 'orsi' => 'orso',
   'etna' => 'vulcano', 'vulcani' => 'vulcano', 'onde' => 'onda', 'mare' => 'onda',
   'montagne' => 'montagna', 'pesci' => 'pesce', 'case' => 'casa', 'casetta' => 'casa', 'barche' => 'barca', 'barchetta' => 'barca',
   'faraglione' => 'faraglioni', 'orche' => 'orca', 'archi' => 'arco'

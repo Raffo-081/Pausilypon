@@ -1779,5 +1779,745 @@ window.PAUSILYPON_CARTOLINE = [
     "sticker": "vesuvio",
     "foto": "img-6162.jpg",
     "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2448.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2450.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Pericolo Orsi Polari",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2453.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2454.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Miniera abbandonata",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2455.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Renna nel giardino",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2458.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2459.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2460.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2461.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2462.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2463.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2463.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2465.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2467.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2474.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2477.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2480.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2485.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2491.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2492.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2493.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2498.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2506.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2511.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2519.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2525.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2526.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2528.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2531.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2534.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2543.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2546.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2548.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2549.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2564.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2566.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2569.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2570.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2571.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2572.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2574.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2575.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2576.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2577.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2580.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2583.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Pedalata estrema",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2584.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2586.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2590.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2591.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2592.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2593.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Trova la volpe",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2594.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2595.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2596.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Husky rumorosi",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2597.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2598.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Oltre i confini",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2600.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2601.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2605.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2607.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2609.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Occhi di ghiaccio",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2611.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2613.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2615.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Il bunker dell'apocalisse",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2617.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2619.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Volpe artica!",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2622.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Caccia all'orso",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2623.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "A mali estremi",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2625.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2626.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "Husky cafè",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2627.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2628.jpg",
+    "autore": "Raffaele"
+  },
+  {
+    "titolo": "",
+    "area": "svalbard",
+    "luogo": "Longyearbyen",
+    "data": "maggio 2026",
+    "testo": "",
+    "sticker": "orso",
+    "foto": "img-2630.jpg",
+    "autore": "Raffaele"
   }
 ];
