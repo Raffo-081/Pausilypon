@@ -139,7 +139,13 @@ header {
 .gridview { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 28px 24px; }
 
 /* Lista */
-.listview { display: block; border-top: 1px solid var(--line); }
+.listview { display: block; }
+.gruppo + .gruppo { margin-top: 40px; }
+.gruppo h3 {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 0; padding-bottom: 10px;
+  border-bottom: 1px solid var(--line); font-family: var(--serif); font-size: 26px; font-weight: normal; line-height: 1.2;
+}
+.gruppo h3 span { font-family: var(--sans); font-size: 13px; color: var(--muted); white-space: nowrap; }
 .row {
   display: grid; grid-template-columns: 104px minmax(0, 1fr) auto; gap: 20px; align-items: center; width: 100%;
   padding: 14px 0; background: none; border: 0; border-bottom: 1px solid var(--line); text-align: left;
@@ -148,6 +154,11 @@ header {
 .row .t { font-family: var(--serif); font-size: 21px; line-height: 1.2; display: block; }
 .row .m { color: var(--muted); font-size: 14px; display: block; margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .row .w { color: var(--muted); font-size: 14px; text-align: right; }
+/* le foto senza titolo né testo, una accanto all altra */
+.striscia { display: flex; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.striscia button { display: block; flex: 1 1 0; min-width: 0; max-width: calc((100% - 20px) / 3); padding: 0; background: none; border: 0; }
+.striscia img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 2px; transition: transform .25s ease; }
+.striscia button:hover img { transform: translateY(-2px); }
 
 [hidden] { display: none !important; }
 footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
@@ -236,12 +247,13 @@ footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
   .row { grid-template-columns: 84px minmax(0, 1fr); }
   .row img { width: 84px; }
   .row .w { display: none; }
+  .striscia { gap: 8px; }
   .nav { position: absolute; bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
   .nav.prev { left: 10px; } .nav.next { right: 10px; }
   .mazzo { width: 90vw; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .inner, .thumb img, .mazzetto img, .pin::before, .levels button, .zona-area { transition: none; }
+  .inner, .thumb img, .striscia img, .mazzetto img, .pin::before, .levels button, .zona-area { transition: none; }
 }
 
 /* Schermata iniziale */

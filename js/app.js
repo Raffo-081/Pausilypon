@@ -204,20 +204,78 @@
           }).join('') + '</div>'
         : '<p class="empty">Ancora nessuna cartolina da qui.</p>');
   }
-  // La griglia mostra le cartoline in ordine casuale, diverso a ogni apertura della pagina.
-  var GRIGLIA = CARDS.slice();
-  for (var gi = GRIGLIA.length - 1; gi > 0; gi--) {
-    var gj = Math.floor(Math.random() * (gi + 1)), gt = GRIGLIA[gi];
-    GRIGLIA[gi] = GRIGLIA[gj]; GRIGLIA[gj] = gt;
+  // Il caso della griglia e della lista nasce da un numero scelto all'apertura del sito e tenuto per tutta la visita:
+  // ricaricando la pagina l'ordine resta lo stesso (e si può tornare al punto in cui si era), aprendo di nuovo il sito cambia.
+  var seme = Math.floor(Math.random() * 4294967296);
+  try {
+    if (sessionStorage.getItem('pausilypon-seme')) seme = Number(sessionStorage.getItem('pausilypon-seme'));
+    else sessionStorage.setItem('pausilypon-seme', String(seme));
+  } catch (e) {}
+  function caso() {            // numeri a caso tra 0 e 1, sempre gli stessi a partire dallo stesso seme (mulberry32)
+    seme = (seme + 0x6D2B79F5) | 0;
+    var t = Math.imul(seme ^ (seme >>> 15), 1 | seme);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   }
+  function mescola(a) {
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(caso() * (i + 1)), t = a[i];
+      a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+  // La griglia mostra le cartoline in ordine casuale, diverso a ogni apertura della pagina.
+  var GRIGLIA = mescola(CARDS.slice());
+  // La lista le raggruppa per luogo e data; i gruppi compaiono in ordine casuale, le cartoline di un gruppo nell'ordine del foglio.
+  var GRUPPI = (function () {
+    var gruppi = [], indice = {};
+    CARDS.forEach(function (c) {
+      var k = (String(c.luogo).trim() + '|' + String(c.data).trim()).toLowerCase();
+      if (!(k in indice)) { indice[k] = gruppi.length; gruppi.push({ luogo: c.luogo, data: c.data, carte: [] }); }
+      gruppi[indice[k]].carte.push(c);
+    });
+    // In ogni gruppo le cartoline senza titolo né testo, se sono almeno due, vanno su strisce di sole foto (da 3 a 5,
+    // o 2 se ne avanzano due) che si alternano a caso con le righe delle altre, senza due strisce di fila finché ci sono righe.
+    gruppi.forEach(function (g) {
+      var mute = g.carte.filter(function (c) { return !c.titolo && !c.testo; });
+      if (mute.length < 2) { g.pezzi = g.carte; return; }
+      var righe = g.carte.filter(function (c) { return c.titolo || c.testo; }), strisce = [];
+      while (mute.length) {
+        var n = mute.length <= 5 ? mute.length : 3 + Math.floor(caso() *(Math.min(5, mute.length - 2) - 2));
+        strisce.push(mute.splice(0, n));
+      }
+      // Le strisce si spargono negli spazi prima, tra e dopo le righe: ogni spazio ne prende lo stesso numero
+      // (di solito zero o una), e quelli che ne prendono una in più sono scelti a caso.
+      var spazi = righe.length + 1, quante = [], scelti = [];
+      for (var s = 0; s < spazi; s++) { quante.push(Math.floor(strisce.length / spazi)); scelti.push(s); }
+      mescola(scelti);
+      scelti.slice(0, strisce.length % spazi).forEach(function (s) { quante[s]++; });
+      g.pezzi = [];
+      quante.forEach(function (q, s) {
+        g.pezzi = g.pezzi.concat(strisce.splice(0, q));
+        if (s < righe.length) g.pezzi.push(righe[s]);
+      });
+    });
+    return mescola(gruppi);
+  })();
+  // L'ordine in cui si sfogliano le cartoline aperte dalla lista è quello in cui compaiono sulla pagina.
+  var LISTA = [].concat.apply([], GRUPPI.map(function (g) { return [].concat.apply([], g.pezzi); }));
   function renderGrid() {
     document.getElementById('v-grid').innerHTML = GRIGLIA.map(function (c) { return thumb(c, true); }).join('');
   }
   function renderList() {
-    document.getElementById('v-list').innerHTML = CARDS.map(function (c) {
-      return '<button type="button" class="row" data-card="' + c.id + '"><img src="' + c.thumb + '" alt="" loading="lazy">' +
-        '<span>' + (c.titolo ? '<span class="t">' + esc(c.titolo) + '</span>' : '') + '<span class="m">' + esc(c.testo || (c.titolo ? '' : c.luogo + ', ' + c.data)) + '</span></span>' +
-        '<span class="w">' + esc(c.luogo + ', ' + c.data) + (c.autore ? '<br>' + esc(c.autore) : '') + '</span></button>';
+    document.getElementById('v-list').innerHTML = GRUPPI.map(function (g) {
+      return '<section class="gruppo"><h3>' + esc(g.luogo) + '<span>' + esc(g.data || 'Senza data') + ' &middot; ' + quante(g.carte.length) + '</span></h3>' +
+        g.pezzi.map(function (c) {
+          if (Array.isArray(c)) {
+            return '<div class="striscia">' + c.map(function (x) {
+              return '<button type="button" data-card="' + x.id + '"' + (x.autore ? ' title="' + esc(x.autore) + '"' : '') + '><img src="' + x.thumb + '" alt="" loading="lazy"></button>';
+            }).join('') + '</div>';
+          }
+          return '<button type="button" class="row" data-card="' + c.id + '"><img src="' + c.thumb + '" alt="" loading="lazy">' +
+            '<span>' + (c.titolo ? '<span class="t">' + esc(c.titolo) + '</span>' : '') + '<span class="m">' + esc(c.testo || '') + '</span></span>' +
+            '<span class="w">' + esc(c.autore || '') + '</span></button>';
+        }).join('') + '</section>';
     }).join('');
   }
   function setView(v) {
@@ -337,7 +395,7 @@
     if (t.dataset.zona !== undefined) { selectZona(t.dataset.zona); return; }
     if (t.dataset.card !== undefined) {
       var id = Number(t.dataset.card);
-      openCard(id, state.view === 'map' ? stessoMese(CARDS[id]) : state.view === 'grid' ? GRIGLIA : CARDS);
+      openCard(id, state.view === 'map' ? stessoMese(CARDS[id]) : state.view === 'grid' ? GRIGLIA : LISTA);
     }
   });
   cardEl.addEventListener('click', flip);
@@ -355,8 +413,25 @@
     if (e.key === 'ArrowRight') step(1);
   });
 
+  // Ricaricando la pagina si torna dove si era: stessa vista, stessa zona, stesso punto della mappa e della pagina.
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  var punto = null;
+  try { punto = JSON.parse(sessionStorage.getItem('pausilypon-punto')); } catch (e) {}
+  window.addEventListener('pagehide', function () {
+    var c = map.getCenter();
+    try {
+      sessionStorage.setItem('pausilypon-punto', JSON.stringify({
+        view: state.view, zona: state.zona, y: window.scrollY, centro: [c.lat, c.lng], zoom: map.getZoom()
+      }));
+    } catch (e) {}
+  });
+
   map.on('zoomend', aggiornaLivelli);
-  map.fitBounds(VISTA, { animate: false });
+  if (punto && punto.centro) map.setView(punto.centro, punto.zoom, { animate: false });
+  else map.fitBounds(VISTA, { animate: false });
   aggiornaLivelli();
-  renderPanel(); renderGrid(); renderList(); setView('map');
+  if (punto && punto.zona && zona(punto.zona)) { state.zona = punto.zona; segnaScelta(); }
+  renderPanel(); renderGrid(); renderList();
+  setView(punto && /^(map|grid|list)$/.test(punto.view) ? punto.view : 'map');
+  if (punto && punto.y && !document.getElementById('intro')) window.scrollTo(0, punto.y);
 })();

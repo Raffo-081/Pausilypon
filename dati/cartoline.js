@@ -1897,16 +1897,6 @@ window.PAUSILYPON_CARTOLINE = [
     "data": "maggio 2026",
     "testo": "",
     "sticker": "orso",
-    "foto": "img-2463.jpg",
-    "autore": "Raffaele"
-  },
-  {
-    "titolo": "",
-    "area": "svalbard",
-    "luogo": "Longyearbyen",
-    "data": "maggio 2026",
-    "testo": "",
-    "sticker": "orso",
     "foto": "img-2465.jpg",
     "autore": "Raffaele"
   },
