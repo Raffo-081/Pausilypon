@@ -182,13 +182,27 @@
     var k = String(c.data).trim().toLowerCase();
     return cardsOf(c.area).filter(function (x) { return String(x.data).trim().toLowerCase() === k; });
   }
+  // Il disegno sul francobollo di una zona: quello più usato dalle sue cartoline; per le zone ancora vuote uno scelto qui.
+  var STICKER_ZONA = { salerno: 'onda', roma: 'arco', dublino: 'casa', oslo: 'barca', caponord: 'aurora' };
+  function stickerDi(z) {
+    var conta = {}, scelto = STICKER_ZONA[z.id] || 'sole', max = 0;
+    cardsOf(z.id).forEach(function (c) {
+      if (!c.sticker) return;
+      conta[c.sticker] = (conta[c.sticker] || 0) + 1;
+      if (conta[c.sticker] > max) { max = conta[c.sticker]; scelto = c.sticker; }
+    });
+    return scelto;
+  }
   function renderPanel() {
     var el = document.getElementById('panel');
     if (!state.zona) {
       el.innerHTML = '<h2>Scegli una zona</h2><p class="sub">' + ZONE.length + ' zone, ' + quante(CARDS.length) + '</p>' +
-        '<ul class="levels">' + ZONE.map(function (z) {
+        // prima le zone che hanno cartoline, poi quelle ancora vuote (ognuna nell ordine di zone.js)
+        '<ul class="levels">' + ZONE.filter(function (z) { return cardsOf(z.id).length; })
+          .concat(ZONE.filter(function (z) { return !cardsOf(z.id).length; })).map(function (z) {
           var n = cardsOf(z.id).length;
-          return '<li><button type="button"' + (n ? '' : ' class="vuota"') + ' data-zona="' + esc(z.id) + '"><span><span class="n">' + esc(z.nome) + '</span>' +
+          return '<li><button type="button"' + (n ? '' : ' class="vuota"') + ' data-zona="' + esc(z.id) + '">' +
+            '<span class="fb-zona">' + stampSvg(z.colori || ['#2347C5', '#F2EDE1'], stickerDi(z), z.nome, 'fb-greca-' + z.id) + '</span><span><span class="n">' + esc(z.nome) + '</span>' +
             '<span class="d">' + esc(z.dove) + '</span></span><span class="c">' + quante(n) + '</span></button></li>';
         }).join('') + '</ul>';
       return;
@@ -304,16 +318,20 @@
     return (z.luoghi && z.luoghi[c.luogo]) || z.colori || ['#2347C5', '#F2EDE1'];
   }
   function stampHtml(c) {
-    var col = coloriDi(c);
-    return '<div class="francobollo"><svg viewBox="0 0 80 100" aria-hidden="true" style="--fb-fondo:' + col[0] + ';--fb-segno:' + col[1] + '">' +
-      '<defs><pattern id="fb-greca" x="11" y="11" width="8.2857" height="8" patternUnits="userSpaceOnUse"><path d="M0 7H6.6V1H1.7V4.8H4.4V3M6.6 7H8.3" class="fb-segno" fill="none" stroke-width="1"/></pattern></defs>' +
+    return '<div class="francobollo">' + stampSvg(coloriDi(c), c.sticker, c.luogo, 'fb-greca') + '</div>';
+  }
+  // Il disegno del francobollo, usato sul retro delle cartoline e sulle tessere delle zone.
+  // pid: il nome del motivo a greca, diverso per ogni francobollo della pagina (ognuno ha i suoi colori).
+  function stampSvg(col, sticker, luogo, pid) {
+    return '<svg viewBox="0 0 80 100" aria-hidden="true" style="--fb-fondo:' + col[0] + ';--fb-segno:' + col[1] + '">' +
+      '<defs><pattern id="' + pid + '" x="11" y="11" width="8.2857" height="8" patternUnits="userSpaceOnUse"><path d="M0 7H6.6V1H1.7V4.8H4.4V3M6.6 7H8.3" class="fb-segno" fill="none" stroke-width="1"/></pattern></defs>' +
       '<rect width="80" height="100" class="fb-fondo"/>' +
       '<rect width="80" height="100" class="fb-denti" fill="none" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0 8.18"/>' +
       '<rect x="8.5" y="8.5" width="63" height="83" class="fb-segno" fill="none" stroke-width="1.1"/>' +
-      '<rect x="11" y="11" width="58" height="8" fill="url(#fb-greca)"/><rect x="11" y="81" width="58" height="8" fill="url(#fb-greca)"/>' +
+      '<rect x="11" y="11" width="58" height="8" fill="url(#' + pid + ')"/><rect x="11" y="81" width="58" height="8" fill="url(#' + pid + ')"/>' +
       '<path d="M11 20.5H69M11 79.5H69" class="fb-segno" stroke-width=".8"/>' +
-      '<g transform="translate(22 25) scale(1.5)" class="fb-segno" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + (GLYPH[c.sticker] || GLYPH.sole) + '</g>' +
-      '<text x="40" y="74" text-anchor="middle" class="fb-luogo" textLength="' + Math.min(54, c.luogo.length * 6.2) + '" lengthAdjust="spacingAndGlyphs">' + esc(c.luogo.toUpperCase()) + '</text></svg></div>';
+      '<g transform="translate(22 25) scale(1.5)" class="fb-segno" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + (GLYPH[sticker] || GLYPH.sole) + '</g>' +
+      '<text x="40" y="74" text-anchor="middle" class="fb-luogo" textLength="' + Math.min(54, luogo.length * 6.2) + '" lengthAdjust="spacingAndGlyphs">' + esc(luogo.toUpperCase()) + '</text></svg>';
   }
   // Il timbro postale: il nome del sito e della zona in tondo, mese e anno al centro, le onde dell annullo a lato.
   function timbroHtml(c) {
