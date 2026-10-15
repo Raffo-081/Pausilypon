@@ -2526,7 +2526,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2951.jpg",
     "autore": "Raffaele"
   },
@@ -2536,7 +2536,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2953.jpg",
     "autore": "Raffaele"
   },
@@ -2546,7 +2546,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2954.jpg",
     "autore": "Raffaele"
   },
@@ -2556,7 +2556,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2956.jpg",
     "autore": "Raffaele"
   },
@@ -2566,7 +2566,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2957.jpg",
     "autore": "Raffaele"
   },
@@ -2576,7 +2576,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2962.jpg",
     "autore": "Raffaele"
   },
@@ -2586,7 +2586,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2966.jpg",
     "autore": "Raffaele"
   },
@@ -2596,7 +2596,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2967.jpg",
     "autore": "Raffaele"
   },
@@ -2606,7 +2606,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2968.jpg",
     "autore": "Raffaele"
   },
@@ -2616,7 +2616,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2970.jpg",
     "autore": "Raffaele"
   },
@@ -2626,7 +2626,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2971.jpg",
     "autore": "Raffaele"
   },
@@ -2636,7 +2636,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2972.jpg",
     "autore": "Raffaele"
   },
@@ -2646,7 +2646,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2973.jpg",
     "autore": "Raffaele"
   },
@@ -2656,7 +2656,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2975.jpg",
     "autore": "Raffaele"
   },
@@ -2666,7 +2666,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2976.jpg",
     "autore": "Raffaele"
   },
@@ -2676,7 +2676,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2978.jpg",
     "autore": "Raffaele"
   },
@@ -2686,7 +2686,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2981.jpg",
     "autore": "Raffaele"
   },
@@ -2696,7 +2696,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2982.jpg",
     "autore": "Raffaele"
   },
@@ -2706,7 +2706,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2983.jpg",
     "autore": "Raffaele"
   },
@@ -2716,7 +2716,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2985.jpg",
     "autore": "Raffaele"
   },
@@ -2726,7 +2726,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2986.jpg",
     "autore": "Raffaele"
   },
@@ -2736,7 +2736,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "Max ha trovato un binocolo da 700 euro lungo il sentiero",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2987.jpg",
     "autore": "Raffaele"
   },
@@ -2746,7 +2746,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2995.jpg",
     "autore": "Raffaele"
   },
@@ -2756,7 +2756,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2997.jpg",
     "autore": "Raffaele"
   },
@@ -2766,7 +2766,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2998.jpg",
     "autore": "Raffaele"
   },
@@ -2776,7 +2776,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-2999.jpg",
     "autore": "Raffaele"
   },
@@ -2786,7 +2786,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3001.jpg",
     "autore": "Raffaele"
   },
@@ -2796,7 +2796,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3002.jpg",
     "autore": "Raffaele"
   },
@@ -2806,7 +2806,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3004.jpg",
     "autore": "Raffaele"
   },
@@ -2816,7 +2816,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3006.jpg",
     "autore": "Raffaele"
   },
@@ -2826,7 +2826,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3008.jpg",
     "autore": "Raffaele"
   },
@@ -2836,7 +2836,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3009.jpg",
     "autore": "Raffaele"
   },
@@ -2846,7 +2846,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3012.jpg",
     "autore": "Raffaele"
   },
@@ -2856,7 +2856,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3013.jpg",
     "autore": "Raffaele"
   },
@@ -2866,7 +2866,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3015.jpg",
     "autore": "Raffaele"
   },
@@ -2876,7 +2876,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3016.jpg",
     "autore": "Raffaele"
   },
@@ -2886,7 +2886,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3018.jpg",
     "autore": "Raffaele"
   },
@@ -2896,7 +2896,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3019.jpg",
     "autore": "Raffaele"
   },
@@ -2906,7 +2906,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3020.jpg",
     "autore": "Raffaele"
   },
@@ -2916,7 +2916,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3021.jpg",
     "autore": "Raffaele"
   },
@@ -2926,7 +2926,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3022.jpg",
     "autore": "Raffaele"
   },
@@ -2936,7 +2936,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3023.jpg",
     "autore": "Raffaele"
   },
@@ -2946,7 +2946,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Senja",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3024.jpg",
     "autore": "Raffaele"
   },
@@ -2956,7 +2956,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Oksfjordhamn",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3026.jpg",
     "autore": "Raffaele"
   },
@@ -2966,7 +2966,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Oksfjordhamn",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3028.jpg",
     "autore": "Raffaele"
   },
@@ -2976,7 +2976,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Oksfjordhamn",
     "data": "giugno 2026",
     "testo": "Siamo stati assaltati dalle zanzare mentre mangiavamo piadine col tonno e bevevamo birra isbjorn",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3029.jpg",
     "autore": "Raffaele"
   },
@@ -2986,7 +2986,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Oksfjordhamn",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3030.jpg",
     "autore": "Raffaele"
   },
@@ -2996,7 +2996,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Oksfjordhamn",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3031.jpg",
     "autore": "Raffaele"
   },
@@ -3006,7 +3006,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Oksfjordhamn",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3032.jpg",
     "autore": "Raffaele"
   },
@@ -3016,7 +3016,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Oksfjordhamn",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3033.jpg",
     "autore": "Raffaele"
   },
@@ -3026,7 +3026,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Oksfjordhamn",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3036.jpg",
     "autore": "Raffaele"
   },
@@ -3036,7 +3036,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3037.jpg",
     "autore": "Raffaele"
   },
@@ -3046,7 +3046,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3038.jpg",
     "autore": "Raffaele"
   },
@@ -3056,7 +3056,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3039.jpg",
     "autore": "Raffaele"
   },
@@ -3066,7 +3066,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3040.jpg",
     "autore": "Raffaele"
   },
@@ -3076,7 +3076,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3047.jpg",
     "autore": "Raffaele"
   },
@@ -3086,7 +3086,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3049.jpg",
     "autore": "Raffaele"
   },
@@ -3096,7 +3096,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3056.jpg",
     "autore": "Raffaele"
   },
@@ -3106,7 +3106,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3059.jpg",
     "autore": "Raffaele"
   },
@@ -3116,7 +3116,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3062.jpg",
     "autore": "Raffaele"
   },
@@ -3126,7 +3126,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3064.jpg",
     "autore": "Raffaele"
   },
@@ -3136,7 +3136,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3066.jpg",
     "autore": "Raffaele"
   },
@@ -3146,7 +3146,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3068.jpg",
     "autore": "Raffaele"
   },
@@ -3156,7 +3156,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3069.jpg",
     "autore": "Raffaele"
   },
@@ -3166,7 +3166,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3072.jpg",
     "autore": "Raffaele"
   },
@@ -3176,7 +3176,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3073.jpg",
     "autore": "Raffaele"
   },
@@ -3186,7 +3186,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3074.jpg",
     "autore": "Raffaele"
   },
@@ -3196,7 +3196,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3076.jpg",
     "autore": "Raffaele"
   },
@@ -3206,7 +3206,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3079.jpg",
     "autore": "Raffaele"
   },
@@ -3216,7 +3216,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3080.jpg",
     "autore": "Raffaele"
   },
@@ -3226,7 +3226,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3082.jpg",
     "autore": "Raffaele"
   },
@@ -3236,7 +3236,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3085.jpg",
     "autore": "Raffaele"
   },
@@ -3246,7 +3246,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3086.jpg",
     "autore": "Raffaele"
   },
@@ -3256,7 +3256,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3088.jpg",
     "autore": "Raffaele"
   },
@@ -3266,7 +3266,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3089.jpg",
     "autore": "Raffaele"
   },
@@ -3276,7 +3276,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3090.jpg",
     "autore": "Raffaele"
   },
@@ -3286,7 +3286,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3091.jpg",
     "autore": "Raffaele"
   },
@@ -3296,7 +3296,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3092.jpg",
     "autore": "Raffaele"
   },
@@ -3306,7 +3306,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3094.jpg",
     "autore": "Raffaele"
   },
@@ -3316,7 +3316,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3096.jpg",
     "autore": "Raffaele"
   },
@@ -3326,7 +3326,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3097.jpg",
     "autore": "Raffaele"
   },
@@ -3336,7 +3336,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3098.jpg",
     "autore": "Raffaele"
   },
@@ -3346,7 +3346,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3099.jpg",
     "autore": "Raffaele"
   },
@@ -3356,7 +3356,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3105.jpg",
     "autore": "Raffaele"
   },
@@ -3366,7 +3366,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3106.jpg",
     "autore": "Raffaele"
   },
@@ -3376,7 +3376,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3107.jpg",
     "autore": "Raffaele"
   },
@@ -3386,7 +3386,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Capo Nord",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3108.jpg",
     "autore": "Raffaele"
   },
@@ -3396,7 +3396,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3109.jpg",
     "autore": "Raffaele"
   },
@@ -3406,7 +3406,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3111.jpg",
     "autore": "Raffaele"
   },
@@ -3416,7 +3416,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3114.jpg",
     "autore": "Raffaele"
   },
@@ -3426,7 +3426,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3115.jpg",
     "autore": "Raffaele"
   },
@@ -3436,7 +3436,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3116.jpg",
     "autore": "Raffaele"
   },
@@ -3446,7 +3446,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3119.jpg",
     "autore": "Raffaele"
   },
@@ -3456,7 +3456,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3120.jpg",
     "autore": "Raffaele"
   },
@@ -3466,7 +3466,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3121.jpg",
     "autore": "Raffaele"
   },
@@ -3476,7 +3476,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3122.jpg",
     "autore": "Raffaele"
   },
@@ -3486,7 +3486,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3123.jpg",
     "autore": "Raffaele"
   },
@@ -3496,7 +3496,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3124.jpg",
     "autore": "Raffaele"
   },
@@ -3506,7 +3506,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3125.jpg",
     "autore": "Raffaele"
   },
@@ -3516,7 +3516,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3127.jpg",
     "autore": "Raffaele"
   },
@@ -3526,7 +3526,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3128.jpg",
     "autore": "Raffaele"
   },
@@ -3536,7 +3536,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Alta Canyon",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3131.jpg",
     "autore": "Raffaele"
   },
@@ -3546,7 +3546,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Olderdalen",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3132.jpg",
     "autore": "Raffaele"
   },
@@ -3556,7 +3556,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Olderdalen",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3133.jpg",
     "autore": "Raffaele"
   },
@@ -3566,7 +3566,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Olderdalen",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3135.jpg",
     "autore": "Raffaele"
   },
@@ -3576,7 +3576,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Blaisvatnet",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3137.jpg",
     "autore": "Raffaele"
   },
@@ -3586,7 +3586,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Blaisvatnet",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3139.jpg",
     "autore": "Raffaele"
   },
@@ -3596,7 +3596,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Blaisvatnet",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3141.jpg",
     "autore": "Raffaele"
   },
@@ -3606,7 +3606,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Blaisvatnet",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3143.jpg",
     "autore": "Raffaele"
   },
@@ -3616,7 +3616,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Blaisvatnet",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3147.jpg",
     "autore": "Raffaele"
   },
@@ -3626,7 +3626,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Blaisvatnet",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3149.jpg",
     "autore": "Raffaele"
   },
@@ -3636,7 +3636,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Tromso",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3150.jpg",
     "autore": "Raffaele"
   },
@@ -3646,7 +3646,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Tromso",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3151.jpg",
     "autore": "Raffaele"
   },
@@ -3656,7 +3656,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Tromso",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3154.jpg",
     "autore": "Raffaele"
   },
@@ -3666,7 +3666,7 @@ window.PAUSILYPON_CARTOLINE = [
     "luogo": "Tromso",
     "data": "giugno 2026",
     "testo": "",
-    "sticker": "",
+    "sticker": "renna",
     "foto": "img-3156.jpg",
     "autore": "Raffaele"
   }
