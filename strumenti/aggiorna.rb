@@ -119,7 +119,12 @@ if Dir.exist?(AMICI)
 end
 
 abort "Non trovo #{fonti[0][:xlsx]}" unless File.exist?(fonti[0][:xlsx])
-zone = File.read(File.join(ROOT, 'dati', 'zone.js')).scan(/^\s*id:\s*'([^']+)'/).flatten
+testo_zone = File.read(File.join(ROOT, 'dati', 'zone.js'))
+zone = testo_zone.scan(/^\s*id:\s*'([^']+)'/).flatten
+# la zona si può scrivere con il suo id o con il suo nome, con o senza spazi e maiuscole: "caponord", "Capo Nord", "capo nord"
+def semplice(s) s.to_s.downcase.gsub(/[^a-z0-9]/, '') end
+NOMI_ZONE = {}
+testo_zone.scan(/^\s*id:\s*'([^']+)',\s*\n\s*nome:\s*'([^']+)'/) { |id, nome| NOMI_ZONE[semplice(id)] = id; NOMI_ZONE[semplice(nome)] = id }
 sticker = File.read(File.join(ROOT, 'js', 'app.js'))[/var GLYPH = \{(.*?)\};/m, 1].to_s.scan(/^\s*(\w+):/).flatten
 
 FileUtils.mkdir_p(PICCOLE)
@@ -156,7 +161,7 @@ fonti.each do |fonte|
     next if c.values.all?(&:empty?)
     c['autore'] = fonte[:autore] if c['autore'].to_s.empty?
     c['data'] = data_leggibile(c['data'])
-    c['area'] = c['area'].downcase
+    c['area'] = NOMI_ZONE[semplice(c['area'])] || c['area'].downcase
     c['sticker'] = c['sticker'].downcase
     c['sticker'] = SINONIMI[c['sticker']] || c['sticker']
     avvisi << "#{e}riga #{riga} (#{c['titolo']}): la zona \"#{c['area']}\" non esiste. Zone valide: #{zone.join(', ')}." unless zone.include?(c['area'])
@@ -204,6 +209,9 @@ File.write(index, File.read(index).gsub(/((?:css|js|dati)\/[\w.-]+?\.(?:css|js))
 
 puts "Cartoline: #{cartoline.size} (#{cartoline.count { |c| !c['foto'].empty? }} con foto vera, #{nuove} foto convertite adesso)"
 puts "Per autore: " + conteggio.map { |a, n| "#{a} #{n}" }.join(', ')
+# le cartoline senza data finiscono in un mazzo a parte: lo segnalo una volta sola
+senza_data = cartoline.each_with_index.select { |c, _| c['data'].to_s.strip.empty? }
+avvisi << "#{senza_data.size} cartoline senza data (dalla riga #{senza_data.first[1] + 2} alla #{senza_data.last[1] + 2}, se vengono tutte dal foglio principale): finiscono in un mazzo «Senza data»." unless senza_data.empty?
 # uno sticker sconosciuto lo segnalo una volta sola, con le righe in cui compare
 sticker_ignoti.each do |nome, dove|
   avvisi << "lo sticker \"#{nome}\" non esiste (#{dove.size} cartoline: #{dove.first(4).join(', ')}#{dove.size > 4 ? '...' : ''}): per ora uso il sole. Sticker validi: #{sticker.join(', ')}."
