@@ -212,6 +212,9 @@ puts "Per autore: " + conteggio.map { |a, n| "#{a} #{n}" }.join(', ')
 # le cartoline senza data finiscono in un mazzo a parte: lo segnalo una volta sola
 senza_data = cartoline.each_with_index.select { |c, _| c['data'].to_s.strip.empty? }
 avvisi << "#{senza_data.size} cartoline senza data (dalla riga #{senza_data.first[1] + 2} alla #{senza_data.last[1] + 2}, se vengono tutte dal foglio principale): finiscono in un mazzo «Senza data»." unless senza_data.empty?
+# date nel futuro: di solito Excel che, trascinando una cella, ha aumentato l anno di uno a ogni riga
+future = cartoline.each_with_index.select { |c, _| (a = c['data'].to_s[/\b(\d{4})\s*\z/, 1]) && a.to_i > Date.today.year }
+avvisi << "#{future.size} cartoline hanno una data nel futuro (dalla riga #{future.first[1] + 2} alla #{future.last[1] + 2}, per esempio \"#{future.first[0]['data']}\"). Se hai trascinato la cella della data in Excel, ha aumentato l anno a ogni riga: copia e incolla la data invece di trascinarla." unless future.empty?
 # uno sticker sconosciuto lo segnalo una volta sola, con le righe in cui compare
 sticker_ignoti.each do |nome, dove|
   avvisi << "lo sticker \"#{nome}\" non esiste (#{dove.size} cartoline: #{dove.first(4).join(', ')}#{dove.size > 4 ? '...' : ''}): per ora uso il sole. Sticker validi: #{sticker.join(', ')}."
