@@ -5,11 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pausilypon</title>
 <link rel="icon" type="image/svg+xml" href="logo/icona.svg">
+<script>
+  // Applica subito il tema (quello scelto, oppure quello del dispositivo) per evitare lampi di colore.
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('pausilypon-tema'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="css/stile.css?v=202610151755">
+<link rel="stylesheet" href="css/stile.css?v=202610151805">
 </head>
 <body>
 <!-- Logo: la coda di Partenope fa da cerchio, al centro Ulisse. Disegno originale in logo/logo-tondo.html -->
@@ -118,7 +127,7 @@
   </div>
   <div class="intro-coda"></div>
 </div>
-<script src="js/intro.js?v=202610151755"></script>
+<script src="js/intro.js?v=202610151805"></script>
 <div class="wrap">
   <header>
     <div class="brand">
@@ -136,6 +145,7 @@
       <button type="button" data-view="grid" aria-pressed="false">Griglia</button>
       <button type="button" data-view="list" aria-pressed="false">Lista</button>
     </div>
+    <button type="button" class="tema" id="tema" aria-label="Tema chiaro o scuro"></button>
   </nav>
 
   <main>
@@ -167,8 +177,8 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="dati/zone.js?v=202610151755"></script>
-<script src="dati/cartoline.js?v=202610151755"></script>
-<script src="js/app.js?v=202610151755"></script>
+<script src="dati/zone.js?v=202610151805"></script>
+<script src="dati/cartoline.js?v=202610151805"></script>
+<script src="js/app.js?v=202610151805"></script>
 </body>
 </html>

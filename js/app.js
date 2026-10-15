@@ -23,7 +23,6 @@
     moschea:  '<path d="M6.5 20V14.5a5.5 5.5 0 0 1 11 0V20"/><path d="M12 9V6.6"/><path d="M12.9 3.2a1.7 1.7 0 1 0 .9 2.9a1.4 1.4 0 0 1-.9-2.9Z"/><path d="M2.6 20V9.5l1-2.6l1 2.6V20M19.4 20V9.5l1-2.6l1 2.6V20"/><path d="M1.5 20H22.5"/><path d="M10.4 20v-2.6a1.6 1.6 0 0 1 3.2 0V20"/>',
     sirena:   '<path d="M9.5 20.5Q8.5 13.5 13 9.5Q14.5 14 16 20.5"/><path d="M13 9.5Q7.5 8 6.5 2.5Q12 3.5 13 6.8Q14 3.5 19.5 2.5Q18.5 8 13 9.5Z"/><path d="M10.6 16.5q2-1.5 4 0M11.3 13.2q1.4-1 2.8 0"/><path d="M2 21.5q3-2.5 6 0M17 21.5q2.5-2.5 5 0"/>',
     orso:     '<path d="M2.5 14Q3 11.8 6 11L8.5 9.6Q13 7.6 17.5 9.2Q21 10.8 21 15V19.5H18.2V16H12.5V19.5H9.8V15.6Q7.4 15.6 6.4 14.6L4 15.2Q2.5 15.2 2.5 14Z"/><path d="M6.1 11l.5-1.5l1.1 1"/><path d="M1.5 22H22.5"/>',
-    renna:    '<path d="M5 12.5H15.5Q18 12.5 18 15V20M5 12.5Q3.8 15.5 4.6 20M8 13V20M15 13.5V20"/><path d="M15.5 12.5L18 7.8L21 8.8"/><path d="M18 7.8L16.6 3.6M17.2 5.4L15 4.6M18 7.8L20.2 3.6M19.3 5.4L21.6 5"/><path d="M5 12.5L3.8 11.6"/>',
     orca:     '<path d="M2 17 Q8 11 15 13 Q20 14.5 22 17"/><path d="M9.5 12.3 Q10.5 5 15 3.5 Q14 9 15.5 13.2"/><path d="M17.5 15 l1.6 .5"/><path d="M2 21 q3 -2.5 6 0 t6 0 t6 0"/>',
     arco:     '<path d="M4 20 V12 a3 3 0 0 1 6 0 V20 M14 20 V12 a3 3 0 0 1 6 0 V20 M2 20 H22"/>'
   };
@@ -92,12 +91,13 @@
 
   // La vista di partenza: l Europa, da Dublino a Istanbul e fino a Capo Nord. Le Svalbard restano appena fuori, più su.
   var VISTA = L.latLngBounds([[36, -11], [72, 33]]);
+  // Ogni zona ha sulla mappa il suo colore: quello di fondo del suo francobollo (in zone.js), che la rappresenta.
   ZONE.forEach(function (z) {
-    var n = cardsOf(z.id).length;
+    var n = cardsOf(z.id).length, colore = esc((z.colori || [])[0] || '');
     z.marker = L.marker(ll(z.centro), {
       icon: L.divIcon({
         className: '', iconSize: [44, 44], iconAnchor: [22, 22],
-        html: '<div class="pin"><span>' + esc(z.nome) + '</span></div>'
+        html: '<div class="pin"' + (colore ? ' style="--zona:' + colore + '"' : '') + '><span>' + esc(z.nome) + '</span></div>'
       }),
       title: z.nome + ', ' + quante(n), alt: z.nome
     }).on('click', function () { selectZona(z.id); });
@@ -108,7 +108,9 @@
       });
       z.area = L.polygon(rings.map(function (r) { return [r]; }), {
         className: 'zona-area' + (z.tipo === 'disegnata' ? ' disegnata' : '')
-      }).on('click', function () { selectZona(z.id); });
+      }).on('click', function () { selectZona(z.id); }).on('add', function () {
+        if (colore) this.getElement().style.setProperty('--zona', colore);
+      });
       z.bounds = z.area.getBounds();
     }
   });
@@ -319,7 +321,7 @@
     return (z.luoghi && z.luoghi[c.luogo]) || z.colori || ['#2347C5', '#F2EDE1'];
   }
   function stampHtml(c) {
-    return '<div class="francobollo">' + stampSvg(coloriDi(c), c.sticker || (zona(c.area) || {}).sticker, c.luogo, 'fb-greca') + '</div>';
+    return '<div class="francobollo">' + stampSvg(coloriDi(c), c.sticker, c.luogo, 'fb-greca') + '</div>';
   }
   // Il disegno del francobollo, usato sul retro delle cartoline e sulle tessere delle zone.
   // pid: il nome del motivo a greca, diverso per ogni francobollo della pagina (ognuno ha i suoi colori).
@@ -405,6 +407,26 @@
     }
   }
   function flip() { cardEl.classList.toggle('flipped'); }
+
+  // ---------- Tema chiaro / scuro ----------
+  // Il tema lo applica già lo script in cima alla pagina; qui il pulsante lo cambia e si ricorda la scelta.
+  var ICONA = {
+    sole: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">' + GLYPH.sole + '</svg>',
+    luna: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5 A8 8 0 1 1 9.5 4 A6.5 6.5 0 0 0 20 14.5 Z"/></svg>'
+  };
+  var temaBtn = document.getElementById('tema');
+  function mostraTema() {
+    var scuro = document.documentElement.dataset.theme !== 'light';
+    temaBtn.innerHTML = scuro ? ICONA.sole : ICONA.luna;     // il pulsante mostra il tema in cui si passa
+    temaBtn.setAttribute('aria-label', scuro ? 'Passa al tema chiaro' : 'Passa al tema scuro');
+  }
+  temaBtn.addEventListener('click', function () {
+    var t = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    document.documentElement.dataset.theme = t;
+    try { localStorage.setItem('pausilypon-tema', t); } catch (e) {}
+    mostraTema();
+  });
+  mostraTema();
 
   // ---------- Eventi ----------
   document.addEventListener('click', function (e) {
