@@ -551,3 +551,13 @@ body.intro-via .intro-scena > .strato { transform: translateY(-140px); }
 .mazzetto-cap .da-capo:hover { color: var(--ink); }
 .caption .conta { margin: 2px 0 0; font-size: 12px; letter-spacing: .12em; color: var(--muted); font-variant-numeric: tabular-nums; }
 .caption .conta:empty { display: none; }
+
+/* Telefono: le voci in alto, il tema e la lingua devono stare tutti su una riga, senza uscire dallo schermo */
+@media (max-width: 520px) {
+  .tools { gap: 6px; max-width: 100%; }
+  .switch { gap: 0; padding: 3px; }
+  .switch button, .switch .vai-manifesto { padding: 7px 9px; font-size: 12.5px; letter-spacing: 0; white-space: nowrap; }
+  .tema, .tema.lingua { width: 34px; height: 34px; }
+  .tema svg { width: 15px; height: 15px; }
+  .tema.lingua { font-size: 11px; }
+}
