@@ -14,11 +14,12 @@
     document.documentElement.dataset.theme = t;
   })();
 </script>
+<script src="js/lingua.js?v=202610161420"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="css/stile.css?v=202610151816">
+<link rel="stylesheet" href="css/stile.css?v=202610161420">
 </head>
 <body>
 <!-- Logo: la coda di Partenope fa da cerchio, al centro Ulisse. Disegno originale in logo/logo-tondo.html -->
@@ -122,17 +123,17 @@
   <div class="intro-titolo">
     <svg class="logo"><use href="#logo"/></svg>
     <p class="intro-nome">Pausilypon</p>
-    <p class="intro-motto">Tregua dagli affanni</p>
+    <p class="intro-motto" data-t="motto">Tregua dagli affanni</p>
   </div>
   </div>
   <div class="intro-coda"></div>
 </div>
-<script src="js/intro.js?v=202610151816"></script>
+<script src="js/intro.js?v=202610161420"></script>
 <div class="wrap">
   <header>
     <div class="brand">
       <h1 class="wordmark"><svg class="logo" aria-hidden="true"><use href="#logo"/></svg>Pausilypon</h1>
-      <p class="lemma">
+      <p class="lemma" data-t="lemma">
         <span class="sill">Pau·si·ly·pon</span> <abbr title="sostantivo maschile">s. m.</abbr>
         <span class="etimo">dal greco <span lang="grc">Παυσίλυπον</span>: <i>paûsis</i> «pausa» + <i>lýpē</i> «affanno».</span>
         <span class="senso">Tregua dagli affanni.</span>
@@ -140,12 +141,14 @@
     </div>
   </header>
   <nav class="tools">
-    <div class="switch" role="group" aria-label="Modo di visualizzazione">
-      <button type="button" data-view="map" aria-pressed="true">Mappa</button>
-      <button type="button" data-view="grid" aria-pressed="false">Griglia</button>
-      <button type="button" data-view="list" aria-pressed="false">Lista</button>
+    <div class="switch" role="group" aria-label="Modo di visualizzazione" data-t-aria="Modo di visualizzazione">
+      <button type="button" data-view="map" aria-pressed="true" data-t="Mappa">Mappa</button>
+      <button type="button" data-view="grid" aria-pressed="false" data-t="Griglia">Griglia</button>
+      <button type="button" data-view="list" aria-pressed="false" data-t="Lista">Lista</button>
+      <a href="presentazione.html" class="vai-manifesto" data-t="Il progetto">Il progetto</a>
     </div>
     <button type="button" class="tema" id="tema" aria-label="Tema chiaro o scuro"></button>
+    <button type="button" class="tema lingua" id="lingua"></button>
   </nav>
 
   <main>
@@ -157,28 +160,36 @@
     <section id="v-list" class="listview" hidden></section>
   </main>
 
+  <!-- In fondo a ogni pagina: la storia del nome -->
+  <section class="progetto" aria-labelledby="nome-titolo">
+    <h2 id="nome-titolo" data-t="nome-titolo">Perché Pausilypon</h2>
+    <p data-t="nome-testo">Più di duemila anni fa il romano Publio Vedio Pollione costruì una villa sulla collina che si affaccia sul golfo di Napoli, e la chiamò <i>Pausilypon</i>: in greco, «tregua dagli affanni». Si diceva che la vista da lassù fosse così bella da guarire chi la guardava, da fargli dimenticare ogni pena. Da quella villa prende il nome la collina di Posillipo, e da quell’idea nasce questo archivio: un bel panorama può dare sollievo.</p>
+    <a class="leggi" href="presentazione.html" data-t="come-funziona">Come funziona il sito</a>
+  </section>
+
 </div>
 
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Cartolina">
-  <button type="button" class="close" id="close">Chiudi</button>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Cartolina" data-t-aria="Cartolina">
+  <button type="button" class="close" id="close" data-t="Chiudi">Chiudi</button>
   <div class="stagecard">
-    <button type="button" class="nav prev" id="prev" aria-label="Cartolina precedente">&#8249;</button>
+    <button type="button" class="nav prev" id="prev" aria-label="Cartolina precedente" data-t-aria="Cartolina precedente">&#8249;</button>
     <div class="mazzo" id="mazzo">
       <div class="pila" id="pila2" hidden></div>
       <div class="pila" id="pila1" hidden></div>
-      <div class="card3d" id="card" role="button" tabindex="0" aria-label="Gira la cartolina"></div>
+      <div class="card3d" id="card" role="button" tabindex="0" aria-label="Gira la cartolina" data-t-aria="Gira la cartolina"></div>
     </div>
-    <button type="button" class="nav next" id="next" aria-label="Cartolina successiva">&#8250;</button>
+    <button type="button" class="nav next" id="next" aria-label="Cartolina successiva" data-t-aria="Cartolina successiva">&#8250;</button>
   </div>
   <div class="caption">
     <p class="title" id="cap-title"></p>
-    <p class="hint">Clicca la cartolina per girarla</p>
+    <p class="conta" id="cap-conta"></p>
+    <p class="hint" data-t="Clicca la cartolina per girarla">Clicca la cartolina per girarla</p>
   </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="dati/zone.js?v=202610151816"></script>
-<script src="dati/cartoline.js?v=202610151816"></script>
-<script src="js/app.js?v=202610151816"></script>
+<script src="dati/zone.js?v=202610161420"></script>
+<script src="dati/cartoline.js?v=202610161420"></script>
+<script src="js/app.js?v=202610161420"></script>
 </body>
 </html>

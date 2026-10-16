@@ -3,6 +3,7 @@
 //   id      nome breve senza spazi: è quello che scrivi nella colonna "area" delle cartoline
 //   nome    nome mostrato sul sito
 //   dove    riga piccola sotto il nome
+//   nome_en, dove_en  gli stessi, in inglese
 //   colori  i due colori del francobollo per le cartoline di questa zona: [fondo, disegno]
 //   sticker il disegno del francobollo per le cartoline di questa zona che lasciano vuota la colonna "sticker"
 //   luoghi  (facoltativo) colori diversi per singoli luoghi della zona, scritti come nella colonna "luogo"
@@ -17,6 +18,7 @@ window.PAUSILYPON_ZONE = [
     id: 'napoli',
     nome: 'Napoli',
     dove: 'Golfo, isole e Costiera Amalfitana',
+    nome_en: 'Naples', dove_en: 'Gulf, islands and Amalfi Coast',   // in inglese
     colori: ['#1389C9', '#F2EDE1'],          // azzurro Napoli
     sticker: 'vesuvio',                     // il francobollo delle cartoline che non ne indicano uno
     luoghi: {
@@ -49,6 +51,7 @@ window.PAUSILYPON_ZONE = [
     id: 'salerno',
     nome: 'Salerno e Cilento',
     dove: 'Da Salerno a Sapri',
+    nome_en: 'Salerno and Cilento', dove_en: 'From Salerno to Sapri',   // in inglese
     colori: ['#5E7A3A', '#F2EDE1'],          // verde ulivo
     sticker: 'limoni',                     // il francobollo delle cartoline che non ne indicano uno
     tipo: 'disegnata',
@@ -63,6 +66,7 @@ window.PAUSILYPON_ZONE = [
     id: 'roma',
     nome: 'Roma',
     dove: 'Italia',
+    nome_en: 'Rome', dove_en: 'Italy',   // in inglese
     colori: ['#8E1B1B', '#E9C46A'],          // porpora e oro
     sticker: 'arco',                     // il francobollo delle cartoline che non ne indicano uno
     tipo: 'punto',
@@ -72,6 +76,7 @@ window.PAUSILYPON_ZONE = [
     id: 'dublino',
     nome: 'Dublino',
     dove: 'Irlanda',
+    nome_en: 'Dublin', dove_en: 'Ireland',   // in inglese
     colori: ['#1E7A4C', '#F2EDE1'],          // verde irlandese
     sticker: 'sole',                     // il francobollo delle cartoline che non ne indicano uno
     tipo: 'punto',
@@ -81,6 +86,7 @@ window.PAUSILYPON_ZONE = [
     id: 'lofoten',
     nome: 'Lofoten',
     dove: 'Norvegia, oltre il Circolo Polare',
+    nome_en: 'Lofoten', dove_en: 'Norway, beyond the Arctic Circle',   // in inglese
     colori: ['#B3261E', '#F2EDE1'],          // rosso delle casette dei pescatori
     sticker: 'pesce',                     // il francobollo delle cartoline che non ne indicano uno
     tipo: 'disegnata',
@@ -94,6 +100,7 @@ window.PAUSILYPON_ZONE = [
     id: 'oslo',
     nome: 'Oslo',
     dove: 'Norvegia',
+    nome_en: 'Oslo', dove_en: 'Norway',   // in inglese
     colori: ['#00205B', '#F2EDE1'],          // blu della bandiera norvegese
     sticker: 'barca',                     // il francobollo delle cartoline che non ne indicano uno
     tipo: 'punto',
@@ -103,6 +110,7 @@ window.PAUSILYPON_ZONE = [
     id: 'caponord',
     nome: 'Capo Nord',
     dove: 'Troms e Finnmark, Norvegia',
+    nome_en: 'North Cape', dove_en: 'Troms and Finnmark, Norway',   // in inglese
     colori: ['#E07B2A', '#1B1F3A'],          // arancio del sole di mezzanotte
     sticker: 'renna',                     // il francobollo delle cartoline che non ne indicano uno
     tipo: 'disegnata',
@@ -117,6 +125,7 @@ window.PAUSILYPON_ZONE = [
     id: 'svalbard',
     nome: 'Isole Svalbard',
     dove: 'Norvegia, Mar Glaciale Artico',
+    nome_en: 'Svalbard Islands', dove_en: 'Norway, Arctic Ocean',   // in inglese
     colori: ['#BFE0EA', '#173042'],          // azzurro ghiaccio
     sticker: 'orso',                     // il francobollo delle cartoline che non ne indicano uno
     tipo: 'disegnata',
@@ -130,6 +139,7 @@ window.PAUSILYPON_ZONE = [
     id: 'istanbul',
     nome: 'Istanbul',
     dove: 'Turchia',
+    nome_en: 'Istanbul', dove_en: 'Turkey',   // in inglese
     colori: ['#14868C', '#F2EDE1'],          // turchese delle maioliche
     sticker: 'moschea',                     // il francobollo delle cartoline che non ne indicano uno
     tipo: 'punto',

@@ -203,9 +203,12 @@ File.write(File.join(ROOT, 'dati', 'cartoline.js'),
   "window.PAUSILYPON_CARTOLINE = " + JSON.pretty_generate(cartoline) + ";\n")
 
 # cambio il numero di versione dei file in index.html, in modo che i browser non mostrino una copia vecchia
-index = File.join(ROOT, 'index.html')
 versione = Time.now.strftime('%Y%m%d%H%M')
-File.write(index, File.read(index).gsub(/((?:css|js|dati)\/[\w.-]+?\.(?:css|js))\?v=\d+/) { "#{$1}?v=#{versione}" })
+%w[index.html presentazione.html].each do |pagina|
+  index = File.join(ROOT, pagina)
+  next unless File.exist?(index)
+  File.write(index, File.read(index).gsub(/((?:css|js|dati)\/[\w.-]+?\.(?:css|js))\?v=\d+/) { "#{$1}?v=#{versione}" })
+end
 
 puts "Cartoline: #{cartoline.size} (#{cartoline.count { |c| !c['foto'].empty? }} con foto vera, #{nuove} foto convertite adesso)"
 puts "Per autore: " + conteggio.map { |a, n| "#{a} #{n}" }.join(', ')

@@ -9,6 +9,7 @@
   // La schermata compare solo quando si apre il sito: ricaricando la pagina o tornandoci nella stessa visita non si rivede.
   // (Con #fermo in fondo all indirizzo compare sempre, per provarla.)
   var prova = location.hash === '#fermo';
+  if (window.applicaLingua) window.applicaLingua(intro);     // la scritta sotto il nome, nella lingua scelta
   try {
     if (sessionStorage.getItem('pausilypon-intro') && !prova) { intro.remove(); return; }
     sessionStorage.setItem('pausilypon-intro', '1');

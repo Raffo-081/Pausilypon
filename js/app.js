@@ -2,7 +2,13 @@
   'use strict';
 
   var ZONE = window.PAUSILYPON_ZONE || [];
-  var CARDS = window.PAUSILYPON_CARTOLINE || [];
+var CARDS = window.PAUSILYPON_CARTOLINE || [];
+// In inglese: nomi e descrizioni delle zone (da zone.js) e mesi delle date; le cartoline per il resto restano come sono.
+var T = window.T || function (s) { return s; };
+if (window.LINGUA === 'en') {
+  ZONE.forEach(function (z) { z.nome = z.nome_en || z.nome; z.dove = z.dove_en || z.dove; });
+  CARDS.forEach(function (c) { c.data = T.data(c.data); });
+}
 
   // Un'area diventa visibile quando sullo schermo è larga almeno così (in pixel); prima è un marcatore.
   var SOGLIA_AREA = 90;
@@ -33,7 +39,7 @@
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
   }
-  function quante(n) { return n + (n === 1 ? ' cartolina' : ' cartoline'); }
+  function quante(n) { return n + ' ' + T(n === 1 ? 'cartolina' : 'cartoline'); }
   var fermo = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---------- Foto segnaposto (disegni, usati quando la colonna "foto" è vuota) ----------
@@ -169,15 +175,30 @@
   }
   // Le cartoline di una zona divise per mese (la colonna "data"), dal più recente al più vecchio: un mazzo per ogni mese.
   var MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+  var MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
   function quando(data) {      // "agosto 2025" diventa un numero che si può mettere in ordine; le date scritte in altro modo vanno in fondo
-    var p = String(data).trim().toLowerCase().split(/\s+/), anno = Number(p[p.length - 1]), mese = MESI.indexOf(p[0]);
+    var p = String(data).trim().toLowerCase().split(/\s+/), anno = Number(p[p.length - 1]), mese = Math.max(MESI.indexOf(p[0]), MONTHS.indexOf(p[0]));
     return anno > 1000 ? anno * 12 + Math.max(mese, 0) : -1;
   }
-  function perMese(list) {
+// Il segnalibro: per ogni mazzo (zona e mese) si ricorda l'ultima cartolina guardata, per tutta la visita.
+// Così chi esce dal mazzo, anche per sbaglio, riaprendolo riprende da lì invece di ricominciare da capo.
+var SEGNI = {};
+try { SEGNI = JSON.parse(sessionStorage.getItem('pausilypon-segni')) || {}; } catch (e) {}
+function chiaveMazzo(c) { return c.area + '|' + String(c.data).trim().toLowerCase(); }
+function segnalibro(chiave, list) {        // la posizione salvata, se la cartolina è ancora nel mazzo; altrimenti -1
+  var id = SEGNI[chiave];
+  for (var k = 0; k < list.length; k++) if (list[k].id === id) return k;
+  return -1;
+}
+function segna(chiave, id) {
+  if (id == null) delete SEGNI[chiave]; else SEGNI[chiave] = id;
+  try { sessionStorage.setItem('pausilypon-segni', JSON.stringify(SEGNI)); } catch (e) {}
+}
+function perMese(list) {
     var gruppi = [], indice = {};
     list.forEach(function (c) {
       var k = String(c.data).trim().toLowerCase();
-      if (!(k in indice)) { indice[k] = gruppi.length; gruppi.push({ mese: c.data || 'Senza data', t: quando(c.data), carte: [] }); }
+      if (!(k in indice)) { indice[k] = gruppi.length; gruppi.push({ mese: c.data || T('Senza data'), t: quando(c.data), carte: [] }); }
       gruppi[indice[k]].carte.push(c);
     });
     return gruppi.sort(function (a, b) { return b.t - a.t; });
@@ -200,7 +221,7 @@
   function renderPanel() {
     var el = document.getElementById('panel');
     if (!state.zona) {
-      el.innerHTML = '<h2>Scegli una zona</h2><p class="sub">' + ZONE.length + ' zone, ' + quante(CARDS.length) + '</p>' +
+      el.innerHTML = '<h2>' + T('Scegli una zona') + '</h2><p class="sub">' + ZONE.length + ' ' + T('zone') + ', ' + quante(CARDS.length) + '</p>' +
         // prima le zone che hanno cartoline, poi quelle ancora vuote (ognuna nell ordine di zone.js)
         '<ul class="levels">' + ZONE.filter(function (z) { return cardsOf(z.id).length; })
           .concat(ZONE.filter(function (z) { return !cardsOf(z.id).length; })).map(function (z) {
@@ -212,15 +233,19 @@
       return;
     }
     var z = zona(state.zona), list = cardsOf(z.id);
-    el.innerHTML = '<button type="button" class="back-link" data-zona="">&#8249; Tutte le zone</button>' +
+    el.innerHTML = '<button type="button" class="back-link" data-zona="">&#8249; ' + T('Tutte le zone') + '</button>' +
       '<h2>' + esc(z.nome) + '</h2><p class="sub">' + esc(z.dove) + ' &middot; ' + quante(list.length) + '</p>' +
       (list.length
-        ? '<div class="mazzi">' + perMese(list).map(function (g) {
-            return '<div class="mese"><button type="button" class="mazzetto" data-card="' + g.carte[0].id + '" aria-label="Sfoglia le cartoline di ' + esc(g.mese) + '">' +
-              g.carte.slice(0, 3).map(function (c, i) { return '<img class="m' + i + '" src="' + c.thumb + '" alt="" loading="lazy">'; }).reverse().join('') +
-              '</button><p class="mazzetto-cap">' + esc(g.mese) + '<span>' + quante(g.carte.length) + '</span></p></div>';
-          }).join('') + '</div>'
-        : '<p class="empty">Ancora nessuna cartolina da qui.</p>');
+? '<div class="mazzi">' + perMese(list).map(function (g) {
+    var chiave = chiaveMazzo(g.carte[0]), k = segnalibro(chiave, g.carte), da = k > 0 ? k : 0;
+    var cima = g.carte.slice(da).concat(g.carte.slice(0, da));
+    return '<div class="mese"><button type="button" class="mazzetto" data-card="' + cima[0].id + '" data-mazzo="' + esc(chiave) + '" aria-label="' + T('Sfoglia le cartoline di') + ' ' + esc(g.mese) + '">' +
+      cima.slice(0, 3).map(function (c, i) { return '<img class="m' + i + '" src="' + c.thumb + '" alt="" loading="lazy">'; }).reverse().join('') +
+      '</button><p class="mazzetto-cap">' + esc(g.mese) + '<span>' + quante(g.carte.length) +
+      (k > 0 ? ' &middot; ' + T('riprendi dalla') + ' ' + (k + 1) + '</span><button type="button" class="da-capo" data-dacapo="' + esc(chiave) + '">' + T('ricomincia da capo') + '</button>' : '</span>') +
+      '</p></div>';
+  }).join('') + '</div>'
+        : '<p class="empty">' + T('Ancora nessuna cartolina da qui.') + '</p>');
   }
   // Il caso della griglia e della lista nasce da un numero scelto all'apertura del sito e tenuto per tutta la visita:
   // ricaricando la pagina l'ordine resta lo stesso (e si può tornare al punto in cui si era), aprendo di nuovo il sito cambia.
@@ -283,7 +308,7 @@
   }
   function renderList() {
     document.getElementById('v-list').innerHTML = GRUPPI.map(function (g) {
-      return '<section class="gruppo"><h3>' + esc(g.luogo) + '<span>' + esc(g.data || 'Senza data') + ' &middot; ' + quante(g.carte.length) + '</span></h3>' +
+      return '<section class="gruppo"><h3>' + esc(g.luogo) + '<span>' + esc(g.data || T('Senza data')) + ' &middot; ' + quante(g.carte.length) + '</span></h3>' +
         g.pezzi.map(function (c) {
           if (Array.isArray(c)) {
             return '<div class="striscia">' + c.map(function (x) {
@@ -348,7 +373,7 @@
       '<path d="M2 34q9-8 18 0t18 0t18 0M2 48q9-8 18 0t18 0t18 0M2 62q9-8 18 0t18 0t18 0M2 76q9-8 18 0t18 0t18 0" stroke-linecap="round"/></g>' +
       '<text class="tb-giro" textLength="252" lengthAdjust="spacing"><textPath href="#timbro-giro" textLength="252" lengthAdjust="spacing">' + esc(giro) + '</textPath></text>' +
       (anno
-        ? '<text x="112" y="52" text-anchor="middle" class="tb-mese">' + esc(sopra) + '</text><text x="112" y="68" text-anchor="middle" class="tb-anno">' + anno + '</text>'
+        ? '<text x="112" y="52" text-anchor="middle" class="tb-mese"' + (sopra.length > 7 ? ' textLength="58" lengthAdjust="spacingAndGlyphs"' : '') + '>' + esc(sopra) + '</text><text x="112" y="68" text-anchor="middle" class="tb-anno">' + anno + '</text>'
         : '<text x="112" y="59" text-anchor="middle" class="tb-mese">' + esc(sopra) + '</text>') +
       '</svg></div>';
   }
@@ -377,10 +402,14 @@
     did.classList.toggle('sotto', !c.titolo);
     did.textContent = !c.titolo ? c.luogo + ', ' + c.data : c.titolo === c.luogo ? c.titolo : c.titolo + ' \u2014 ' + c.luogo;
     document.getElementById('prev').disabled = document.getElementById('next').disabled = ctx.length < 2;
+    document.getElementById('cap-conta').textContent = ctx.length > 1 ? (pos + 1) + ' / ' + ctx.length : '';
+    if (ctxMazzo) segna(ctxMazzo, c.id);
     sotto(document.getElementById('pila1'), 1);
     sotto(document.getElementById('pila2'), 2);
   }
-  function openCard(id, list) {
+  var ctxMazzo = null;      // il mazzo da cui si sta sfogliando (per il segnalibro); null per griglia e lista
+  function openCard(id, list, mazzo) {
+    ctxMazzo = mazzo || null;
     ctx = list; pos = list.map(function (c) { return c.id; }).indexOf(id);
     lastFocus = document.activeElement;
     showCard();
@@ -389,6 +418,7 @@
   }
   function closeCard() {
     modal.classList.remove('open');
+    if (ctxMazzo && state.view === 'map') renderPanel();      // il mazzo mostra in cima la cartolina a cui si è arrivati
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
   // Sfogliare: andando avanti la cartolina in cima vola via e finisce in fondo al mazzo; indietro, rientra.
@@ -419,7 +449,7 @@
   function mostraTema() {
     var scuro = document.documentElement.dataset.theme !== 'light';
     temaBtn.innerHTML = scuro ? ICONA.sole : ICONA.luna;     // il pulsante mostra il tema in cui si passa
-    temaBtn.setAttribute('aria-label', scuro ? 'Passa al tema chiaro' : 'Passa al tema scuro');
+    temaBtn.setAttribute('aria-label', T(scuro ? 'Passa al tema chiaro' : 'Passa al tema scuro'));
   }
   temaBtn.addEventListener('click', function () {
     var t = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
@@ -431,13 +461,15 @@
 
   // ---------- Eventi ----------
   document.addEventListener('click', function (e) {
-    var t = e.target.closest('[data-view],[data-zona],[data-card]');
+    var t = e.target.closest('[data-view],[data-zona],[data-card],[data-dacapo]');
     if (!t) return;
+    if (t.dataset.dacapo) { segna(t.dataset.dacapo, null); renderPanel(); return; }
     if (t.dataset.view) { setView(t.dataset.view); return; }
     if (t.dataset.zona !== undefined) { selectZona(t.dataset.zona); return; }
     if (t.dataset.card !== undefined) {
       var id = Number(t.dataset.card);
-      openCard(id, state.view === 'map' ? stessoMese(CARDS[id]) : state.view === 'grid' ? GRIGLIA : LISTA);
+      if (state.view === 'map') openCard(id, stessoMese(CARDS[id]), t.dataset.mazzo || chiaveMazzo(CARDS[id]));
+      else openCard(id, state.view === 'grid' ? GRIGLIA : LISTA);
     }
   });
   cardEl.addEventListener('click', flip);
@@ -476,4 +508,5 @@
   renderPanel(); renderGrid(); renderList();
   setView(punto && /^(map|grid|list)$/.test(punto.view) ? punto.view : 'map');
   if (punto && punto.y && !document.getElementById('intro')) window.scrollTo(0, punto.y);
+
 })();
