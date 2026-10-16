@@ -44,35 +44,38 @@
 }
 /* Tema chiaro, "Mediterraneo di giorno": carta calda invece del bianco puro, inchiostro blu notte, mare celeste sulla mappa.
    Le ombre sono blu notte e a due strati, una vicina e una ampia e leggera: le foto sembrano stampe appoggiate sulla carta. */
+/* Tema chiaro "Controra": la luce calda del primo pomeriggio d'estate, quando tutto rallenta.
+   Fondo color sabbia invece del bianco, inchiostro marrone scuro invece del nero, accenti terracotta,
+   contrasti morbidi e ombre calde: deve riposare gli occhi, non abbagliarli. */
 :root[data-theme="light"] {
-  --bg: #F1E9D9;
-  --bg-2: #EAE0CC;
-  --paper: #F8F1E3;
-  --paper-2: #FBF6EB;
-  --ink: #1B2233;
-  --muted: #646A78;
-  --faint: #969AA5;
-  --line: #E2D6BF;
-  --line-2: #D4C4A6;
-  --sea: #DCE2E2;
-  --accent: #2347C5;
-  --terracotta: #B9542F;
-  --limone: #C08A0C;
-  --ombra: 0 20px 50px -28px rgba(27, 34, 51, .35);
-  --tiles: saturate(.45) sepia(.12) brightness(1.02) contrast(.95);
-  --alone-cielo: #E2E1E4; --fondo-1: #F3ECDE; --fondo-2: #F1E9D9; --fondo-3: #EFE6D3;
-  --alone-logo: rgba(35, 71, 197, .18);
-  --vignetta: inset 0 0 90px rgba(27, 34, 51, .12);
-  --velo: radial-gradient(ellipse at center, rgba(243, 236, 222, .9), rgba(226, 214, 191, .96));
-  --ombra-foto: 0 1px 2px rgba(27, 34, 51, .14), 0 6px 14px -6px rgba(27, 34, 51, .2), 0 24px 40px -20px rgba(27, 34, 51, .35);
-  --ombra-foto-su: 0 1px 2px rgba(27, 34, 51, .14), 0 10px 20px -8px rgba(27, 34, 51, .22), 0 34px 54px -22px rgba(27, 34, 51, .45);
-  --ombra-mini: 0 1px 2px rgba(27, 34, 51, .14), 0 8px 16px -8px rgba(27, 34, 51, .3);
-  --ombra-griglia: 0 1px 2px rgba(27, 34, 51, .12), 0 8px 18px -10px rgba(27, 34, 51, .35);
-  --ombra-griglia-su: 0 2px 4px rgba(27, 34, 51, .14), 0 26px 44px -16px rgba(27, 34, 51, .5);
-  --ombra-tessera: 0 1px 2px rgba(27, 34, 51, .08), 0 12px 26px -18px rgba(27, 34, 51, .35);
-  --ombra-tessera-su: 0 2px 4px rgba(27, 34, 51, .1), 0 22px 40px -22px rgba(27, 34, 51, .45);
-  --ombra-francobollo: 0 3px 4px rgba(27, 34, 51, .25);
-  --ombra-comandi: 0 10px 26px -14px rgba(27, 34, 51, .35);
+  --bg: #EBE1CE;
+  --bg-2: #E4D8C2;
+  --paper: #F3EBDC;
+  --paper-2: #F7F0E3;
+  --ink: #3A2F26;
+  --muted: #86786A;
+  --faint: #AB9E8E;
+  --line: #DCCDB4;
+  --line-2: #CCB99A;
+  --sea: #E2D7C2;
+  --accent: #A65E3A;
+  --terracotta: #BF7350;
+  --limone: #B5852B;
+  --ombra: 0 20px 50px -28px rgba(92, 62, 34, .32);
+  --tiles: sepia(.5) saturate(.55) hue-rotate(-8deg) brightness(1.02) contrast(.88);
+  --alone-cielo: #EAD9BE; --fondo-1: #EFE5D3; --fondo-2: #EBE1CE; --fondo-3: #E6DAC4;
+  --alone-logo: rgba(166, 94, 58, .16);
+  --vignetta: inset 0 0 90px rgba(110, 78, 44, .14);
+  --velo: radial-gradient(ellipse at center, rgba(240, 230, 212, .9), rgba(222, 206, 180, .96));
+  --ombra-foto: 0 1px 2px rgba(92, 62, 34, .14), 0 6px 14px -6px rgba(92, 62, 34, .18), 0 24px 40px -20px rgba(92, 62, 34, .3);
+  --ombra-foto-su: 0 1px 2px rgba(92, 62, 34, .14), 0 10px 20px -8px rgba(92, 62, 34, .2), 0 34px 54px -22px rgba(92, 62, 34, .38);
+  --ombra-mini: 0 1px 2px rgba(92, 62, 34, .14), 0 8px 16px -8px rgba(92, 62, 34, .26);
+  --ombra-griglia: 0 1px 2px rgba(92, 62, 34, .1), 0 8px 18px -10px rgba(92, 62, 34, .3);
+  --ombra-griglia-su: 0 2px 4px rgba(92, 62, 34, .12), 0 26px 44px -16px rgba(92, 62, 34, .42);
+  --ombra-tessera: 0 1px 2px rgba(92, 62, 34, .07), 0 12px 26px -18px rgba(92, 62, 34, .3);
+  --ombra-tessera-su: 0 2px 4px rgba(92, 62, 34, .09), 0 22px 40px -22px rgba(92, 62, 34, .4);
+  --ombra-francobollo: 0 3px 4px rgba(92, 62, 34, .22);
+  --ombra-comandi: 0 10px 26px -14px rgba(92, 62, 34, .3);
   --sotto-1: .96; --sotto-2: .92;
   color-scheme: light;
 }
